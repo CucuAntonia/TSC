@@ -19,10 +19,12 @@ module instr_register_test
   );
 
   timeunit 1ns/1ns;
+  parameter RD_NR = 20;
+  parameter WR_NR = 20;
 
   int seed = 555;
 
-  initial begin
+  initial begin //timpul 0 al simulatii se executa
     $display("\n\n***********************************************************");
     $display(    "***  THIS IS NOT A SELF-CHECKING TESTBENCH (YET).  YOU  ***");
     $display(    "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***");
@@ -31,7 +33,7 @@ module instr_register_test
 
     $display("\nReseting the instruction register...");
     write_pointer  = 5'h00;         // initialize write pointer
-    read_pointer   = 5'h1F;         // initialize read pointer
+    read_pointer   = 5'h1F;         // initialize read pointer*
     load_en        = 1'b0;          // initialize load control line
     reset_n       <= 1'b0;          // assert reset_n (active low)
     repeat (2) @(posedge clk) ;     // hold in reset for 2 clock cycles
@@ -39,7 +41,8 @@ module instr_register_test
 
     $display("\nWriting values to register stack...");
     @(posedge clk) load_en = 1'b1;  // enable writing to register
-    repeat (7) begin
+    //repeat (3) begin - cod original
+    repeat (WR_NR) begin //modificare 11.03.2024 
       @(posedge clk) randomize_transaction;
       @(negedge clk) print_transaction;
     end
@@ -47,12 +50,14 @@ module instr_register_test
 
     // read back and display same three register locations
     $display("\nReading back the same register locations written...");
-    for (int i=0; i<=6; i++) begin
+    //for (int i=0; i<=2; i++) begin - cod original
+    for (int i=0; i<=RD_NR; i++) begin //modificare 11.02.2024
       // later labs will replace this loop with iterating through a
       // scoreboard to determine which addresses were written and
       // the expected values to be read back
       @(posedge clk) read_pointer = i;
       @(negedge clk) print_results;
+      check_results;
     end
 
     @(posedge clk) ;
@@ -72,9 +77,9 @@ module instr_register_test
     // addresses of 0, 1 and 2.  This will be replaceed with randomizeed
     // write_pointer values in a later lab
     //
-    static int temp = 0;
-    operand_a     <= $random(seed)%16;                 // between -15 and 15
-    operand_b     <= $unsigned($random)%16;            // between 0 and 15
+    static int temp = 0; //static - alocata o singura data la apelul functiei
+    operand_a     <= $random(seed)%16;                 // between -15 and 15 ..random genereaza un nr pe 32 biti, vendor - producator tool -2G....+2G
+    operand_b     <= $unsigned($random)%16;            // between 0 and 15 //converteste nr negative la pozitive 
     opcode        <= opcode_t'($unsigned($random)%8);  // between 0 and 7, cast to opcode_t type
     write_pointer <= temp++;
   endfunction: randomize_transaction
@@ -91,6 +96,17 @@ module instr_register_test
     $display("  opcode = %0d (%s)", instruction_word.opc, instruction_word.opc.name);
     $display("  operand_a = %0d",   instruction_word.op_a);
     $display("  operand_b = %0d\n", instruction_word.op_b);
+    $display("  result = %0d\n", instruction_word.result);
   endfunction: print_results
+
+  function check_results;
+  //calculam si aici rezultatul si comparam cu cel primit de la DUT
+  //actual instr_word.result, declaram variabila locala exp_result
+  //din instr lusm op a, op b, opcode si mai facem calculul o data
+   //la final un if separat care trebuie sa faca comparatie intre rezultat comparat aici si rezultatul primit
+  
+ 
+
+  endfunction: check_results
 
 endmodule: instr_register_test
