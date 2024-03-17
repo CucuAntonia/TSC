@@ -24,7 +24,7 @@ module instr_register_test
 
   int seed = 555;
 
-  initial begin //timpul 0 al simulatii se executa
+  initial begin //timpul 0 al simularii se executa
     $display("\n\n***********************************************************");
     $display(    "***  THIS IS NOT A SELF-CHECKING TESTBENCH (YET).  YOU  ***");
     $display(    "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***");
@@ -104,8 +104,34 @@ module instr_register_test
   //actual instr_word.result, declaram variabila locala exp_result
   //din instr lusm op a, op b, opcode si mai facem calculul o data
    //la final un if separat care trebuie sa faca comparatie intre rezultat comparat aici si rezultatul primit
-  
- 
+  int expected_result;
+  if (instruction_word.opc == ZERO) 
+    expected_result = 0;
+  else if (instruction_word.opc == PASSA)
+    expected_result = instruction_word.op_a;
+  else if (instruction_word.opc == PASSB)
+    expected_result = instruction_word.op_b;
+  else if (instruction_word.opc == ADD)
+    expected_result = instruction_word.op_a + instruction_word.op_b;
+  else if (instruction_word.opc == SUB)
+    expected_result = instruction_word.op_a - instruction_word.op_b;
+  else if (instruction_word.opc == MULT)
+    expected_result = instruction_word.op_a * instruction_word.op_b;
+  else if (instruction_word.opc == DIV) begin
+    if(instruction_word.op_b== 0)
+      expected_result = 0;
+    else
+      expected_result = instruction_word.op_a / instruction_word.op_b; 
+  end
+  else if (instruction_word.opc == MOD)
+    expected_result = instruction_word.op_a % instruction_word.op_b;
+
+  $display("Actual result = %0d\n", instruction_word.result);
+  $display("Expected result = %0d\n", expected_result);
+  if(expected_result == instruction_word.result)
+     $display("The result is ok!");
+  else
+     $display("Error! There is a problem with the result!");
 
   endfunction: check_results
 
