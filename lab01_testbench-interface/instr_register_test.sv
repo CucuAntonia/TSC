@@ -91,6 +91,7 @@ module instr_register_test
     final_report;
     //in final report fopen("reports/regression_status.txt/ si citim pe rand fisierele) si facem TEST_NAME failed /passed si apoi close file ca 
     //next step sa se afiseze si parametrii cu cre am rulat si nr de rd si wr
+    //examen - adauga parametru nou, save forme unda 
     
     $display("\n***********************************************************");
     $display(  "***  THIS IS A SELF-CHECKING TESTBENCH.  YOU  DON'T ***");
