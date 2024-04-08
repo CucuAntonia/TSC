@@ -31,6 +31,7 @@ module instr_register_test
   //static temp2 = 31
   parameter RD_ORDER = 1;
   parameter WR_ORDER = 0; //0 - i, 1 - rand, 2 - d
+  parameter TEST_CASE;
 
   int tests_passed = 0;
   int num_of_errors_per_test = 0;
@@ -88,6 +89,8 @@ module instr_register_test
 
     @(posedge clk);
     final_report;
+    //in final report fopen("reports/regression_status.txt/ si citim pe rand fisierele) si facem TEST_NAME failed /passed si apoi close file ca 
+    //next step sa se afiseze si parametrii cu cre am rulat si nr de rd si wr
     
     $display("\n***********************************************************");
     $display(  "***  THIS IS A SELF-CHECKING TESTBENCH.  YOU  DON'T ***");

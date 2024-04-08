@@ -1,0 +1,337 @@
+# 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 09:25:04 on Apr 08,2024
+# vlog -sv -timescale 1ps/1ps -work work -f sources.txt 
+# -- Compiling package instr_register_pkg
+# -- Compiling module instr_register
+# -- Importing package instr_register_pkg
+# -- Compiling module instr_register_test
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(86): (vlog-2240) Treating stand-alone use of function 'check_results' as an implicit VOID cast.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(90): (vlog-2240) Treating stand-alone use of function 'final_report' as an implicit VOID cast.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(148): (vlog-2250) Function "check_results" has no return value assignment.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(244): (vlog-2250) Function "final_report" has no return value assignment.
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 09:25:04 on Apr 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GWR_ORDER=2 -GWR_NR=10 -GRD_ORDER=0 -GRD_NR=10 
+# Start time: 09:25:04 on Apr 08,2024
+# 
+# 
+# ***********************************************************
+# ***  THIS IS A SELF-CHECKING TESTBENCH.  YOU DON'T ***
+# ***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***
+# ***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***
+# ***********************************************************
+# 
+# Reseting the instruction register...
+# 
+# Writing values to register stack...
+# Writing to register location 31: 
+#   opcode = 1 (PASSA)
+#   operand_a = -12
+#   operand_b = 7
+# 
+# Am salvat! WRP 31
+# OPCODE =  1
+# OPERAND_A: -12
+# OPERAND_B: 7
+# 
+# RESULT: 0
+# 
+# Writing to register location 30: 
+#   opcode = 0 (ZERO)
+#   operand_a = -9
+#   operand_b = 1
+# 
+# Am salvat! WRP 30
+# OPCODE =  0
+# OPERAND_A: -9
+# OPERAND_B: 1
+# 
+# RESULT: 0
+# 
+# Writing to register location 29: 
+#   opcode = 7 (MOD)
+#   operand_a = -15
+#   operand_b = 8
+# 
+# Am salvat! WRP 29
+# OPCODE =  7
+# OPERAND_A: -15
+# OPERAND_B: 8
+# 
+# RESULT: 0
+# 
+# Writing to register location 28: 
+#   opcode = 5 (MULT)
+#   operand_a = -8
+#   operand_b = 7
+# 
+# Am salvat! WRP 28
+# OPCODE =  5
+# OPERAND_A: -8
+# OPERAND_B: 7
+# 
+# RESULT: 0
+# 
+# Writing to register location 27: 
+#   opcode = 3 (ADD)
+#   operand_a = -9
+#   operand_b = 5
+# 
+# Am salvat! WRP 27
+# OPCODE =  3
+# OPERAND_A: -9
+# OPERAND_B: 5
+# 
+# RESULT: 0
+# 
+# Writing to register location 26: 
+#   opcode = 4 (SUB)
+#   operand_a = 5
+#   operand_b = 3
+# 
+# Am salvat! WRP 26
+# OPCODE =  4
+# OPERAND_A: 5
+# OPERAND_B: 3
+# 
+# RESULT: 0
+# 
+# Writing to register location 25: 
+#   opcode = 3 (ADD)
+#   operand_a = 3
+#   operand_b = 12
+# 
+# Am salvat! WRP 25
+# OPCODE =  3
+# OPERAND_A: 3
+# OPERAND_B: 12
+# 
+# RESULT: 0
+# 
+# Writing to register location 24: 
+#   opcode = 6 (DIV)
+#   operand_a = 12
+#   operand_b = 3
+# 
+# Am salvat! WRP 24
+# OPCODE =  6
+# OPERAND_A: 12
+# OPERAND_B: 3
+# 
+# RESULT: 0
+# 
+# Writing to register location 23: 
+#   opcode = 1 (PASSA)
+#   operand_a = 3
+#   operand_b = 14
+# 
+# Am salvat! WRP 23
+# OPCODE =  1
+# OPERAND_A: 3
+# OPERAND_B: 14
+# 
+# RESULT: 0
+# 
+# Writing to register location 22: 
+#   opcode = 1 (PASSA)
+#   operand_a = -2
+#   operand_b = 9
+# 
+# Am salvat! WRP 22
+# OPCODE =  1
+# OPERAND_A: -2
+# OPERAND_B: 9
+# 
+# RESULT: 0
+# 
+# 
+# Reading back the same register locations written...
+# Read from register location 0: 
+#   opcode = x ()
+#   operand_a = x
+#   operand_b = x
+# 
+#   result = x
+# 
+# Actual result = x
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# Read from register location 1: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# Actual result = 0
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# Read from register location 2: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# Actual result = 0
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# Read from register location 3: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# Actual result = 0
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# Read from register location 4: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# Actual result = 0
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# Read from register location 5: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# Actual result = 0
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# Read from register location 6: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# Actual result = 0
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# Read from register location 7: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# Actual result = 0
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# Read from register location 8: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# Actual result = 0
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# Read from register location 9: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# Actual result = 0
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# Read from register location 10: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# Actual result = 0
+# 
+# Expected result = x
+# 
+# Opcode CORRECT!
+# Operand_a CORRECT!
+# Operand_b CORRECT!
+# Result CORRECT!
+# 
+# ******************************************************
+#  *** There is a total of         11 values to read ***
+#  *** and         10 values to write. ***
+#  *** Total tests :         11 *** 
+#  *** Passed values:         11 *** 
+#  *** Failed values:          0 *** 
+#  ******************************************************
+# 
+# ***********************************************************
+# ***  THIS IS A SELF-CHECKING TESTBENCH.  YOU  DON'T ***
+# ***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***
+# ***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***
+# ***********************************************************
+# 
+# ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(97)
+#    Time: 256 ns  Iteration: 1  Instance: /top/test
+# End time: 09:25:04 on Apr 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
