@@ -31,7 +31,8 @@ module instr_register_test
   //static temp2 = 31
   parameter RD_ORDER = 1;
   parameter WR_ORDER = 0; //0 - i, 1 - rand, 2 - d
-  parameter TEST_CASE;
+  //parameter TEST_CASE;
+  parameter TEST_NAME;
 
   int tests_passed = 0;
   int num_of_errors_per_test = 0;
@@ -246,18 +247,25 @@ module instr_register_test
 
 //mai trebuie o functie de final report, cu passed, failed, rd nr si wr nr..si auto verificare daca pass+fail = rd_nr /wr/nr
 function final_report;
-  $display("\n******************************************************");
-  $display(" *** There is a total of",RD_NR + 1," values to read ***");
-  $display(" *** and",WR_NR," values to write. ***");
-  $display(" *** Total tests :", total_tests," *** ");
-  $display(" *** Passed values:",tests_passed," *** ");
-  $display(" *** Failed values:",tests_failed," *** ");
-  $display(" ******************************************************");
+  // $display("\n******************************************************");
+  // $display(" *** There is a total of",RD_NR + 1," values to read ***");
+  // $display(" *** and",WR_NR," values to write. ***");
+  // $display(" *** Total tests :", total_tests," *** ");
+  // $display(" *** Passed values:",tests_passed," *** ");
+  // $display(" *** Failed values:",tests_failed," *** ");
+  // $display(" ******************************************************");
   //  $display("\nNumber of errors per transactions: %0d", num_of_errors_per_test);
   //  $display("\nNumber of failed tests: %0d", tests_failed);
 
-  if(tests_passed + tests_failed != total_tests)
-    $display("ATTENTION! The number of passed and failed values does not match the number of values! ");
+  // if(tests_passed + tests_failed != total_tests)
+  //   $display("ATTENTION! The number of passed and failed values does not match the number of values! ");
+  int fd;
+  fd = $fopen("../reports/regression_status.txt", "a");
+  if(tests_failed == 0)
+    $fdisplay(fd, "%s: PASSED", TEST_NAME);
+  else
+    $fdisplay(fd, "%s: FAILED", TEST_NAME);
+  $fclose(fd);
 
 endfunction: final_report
 

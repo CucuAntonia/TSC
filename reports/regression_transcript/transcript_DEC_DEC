@@ -1,23 +1,23 @@
 # 1
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 09:25:05 on Apr 08,2024
+# Start time: 23:23:01 on Apr 13,2024
 # vlog -sv -timescale 1ps/1ps -work work -f sources.txt 
 # -- Compiling package instr_register_pkg
 # -- Compiling module instr_register
 # -- Importing package instr_register_pkg
 # -- Compiling module instr_register_test
-# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(86): (vlog-2240) Treating stand-alone use of function 'check_results' as an implicit VOID cast.
-# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(90): (vlog-2240) Treating stand-alone use of function 'final_report' as an implicit VOID cast.
-# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(148): (vlog-2250) Function "check_results" has no return value assignment.
-# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(244): (vlog-2250) Function "final_report" has no return value assignment.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(88): (vlog-2240) Treating stand-alone use of function 'check_results' as an implicit VOID cast.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(92): (vlog-2240) Treating stand-alone use of function 'final_report' as an implicit VOID cast.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(153): (vlog-2250) Function "check_results" has no return value assignment.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(249): (vlog-2250) Function "final_report" has no return value assignment.
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 09:25:05 on Apr 08,2024, Elapsed time: 0:00:00
+# End time: 23:23:01 on Apr 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 4
-# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GWR_ORDER=2 -GWR_NR=10 -GRD_ORDER=2 -GRD_NR=10 
-# Start time: 09:25:05 on Apr 08,2024
+# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=DEC_DEC -GWR_ORDER=2 -GWR_NR=10 -GRD_ORDER=2 -GRD_NR=10 
+# Start time: 23:23:01 on Apr 13,2024
 # 
 # 
 # ***********************************************************
@@ -317,21 +317,13 @@
 # Operand_b CORRECT!
 # Result CORRECT!
 # 
-# ******************************************************
-#  *** There is a total of         11 values to read ***
-#  *** and         10 values to write. ***
-#  *** Total tests :         11 *** 
-#  *** Passed values:         11 *** 
-#  *** Failed values:          0 *** 
-#  ******************************************************
-# 
 # ***********************************************************
 # ***  THIS IS A SELF-CHECKING TESTBENCH.  YOU  DON'T ***
 # ***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***
 # ***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***
 # ***********************************************************
 # 
-# ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(97)
+# ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(102)
 #    Time: 256 ns  Iteration: 1  Instance: /top/test
-# End time: 09:25:06 on Apr 08,2024, Elapsed time: 0:00:01
+# End time: 23:23:01 on Apr 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
