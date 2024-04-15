@@ -1,6 +1,6 @@
 # 1
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 23:23:01 on Apr 13,2024
+# Start time: 08:15:04 on Apr 15,2024
 # vlog -sv -timescale 1ps/1ps -work work -f sources.txt 
 # -- Compiling package instr_register_pkg
 # -- Compiling module instr_register
@@ -14,10 +14,10 @@
 # 
 # Top level modules:
 # 	top
-# End time: 23:23:01 on Apr 13,2024, Elapsed time: 0:00:00
+# End time: 08:15:04 on Apr 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 4
 # vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=DEC_DEC -GWR_ORDER=2 -GWR_NR=10 -GRD_ORDER=2 -GRD_NR=10 
-# Start time: 23:23:01 on Apr 13,2024
+# Start time: 08:15:04 on Apr 15,2024
 # 
 # 
 # ***********************************************************
@@ -216,9 +216,9 @@
 #   operand_a = -9
 #   operand_b = 5
 # 
-#   result = -4
+#   result = -18
 # 
-# Actual result = -4
+# Actual result = -18
 # 
 # Expected result = x
 # 
@@ -246,9 +246,9 @@
 #   operand_a = 3
 #   operand_b = 12
 # 
-#   result = 15
+#   result = 6
 # 
-# Actual result = 15
+# Actual result = 6
 # 
 # Expected result = x
 # 
@@ -325,5 +325,5 @@
 # 
 # ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(102)
 #    Time: 256 ns  Iteration: 1  Instance: /top/test
-# End time: 23:23:01 on Apr 13,2024, Elapsed time: 0:00:00
+# End time: 08:15:04 on Apr 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0

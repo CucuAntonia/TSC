@@ -33,12 +33,13 @@ module instr_register_test
   parameter WR_ORDER = 0; //0 - i, 1 - rand, 2 - d
   //parameter TEST_CASE;
   parameter TEST_NAME;
+  parameter SEED_VAL = 555;
 
   int tests_passed = 0;
   int num_of_errors_per_test = 0;
   int tests_failed = 0;
   int total_tests = 0;
-  int seed = 555;
+  int seed = SEED_VAL;
   instruction_t iw_reg_test[0:31];
 
   initial begin //timpul 0 al simularii se executa
@@ -112,6 +113,7 @@ module instr_register_test
     // addresses of 0, 1 and 2.  This will be replaceed with randomizeed
     // write_pointer values in a later lab
     //
+    //examen - adaugare POW, ca operatie..si ceva la results cu bitul 63 ca sa fie semnul
     static int temp = 0; //static - alocata o singura data la apelul functiei
     //pt cazul decremental facem un temp_decrement = 31 si facem temp-- ...cand se ajunge la 0, facem -- => -1 care e 111111 = ultimii 5 biti = 31, ia de la capat
     static int temp2 = 31;
@@ -161,11 +163,11 @@ module instr_register_test
   operand_result expected_result;
 
   static bit has_error = 0;
-   if (!reset_n) begin
-      foreach (iw_reg_test[i])
-        iw_reg_test[i] = '{opc:ZERO,default:0};  // reset to all zeros //sintaxa de a initializa o structura in sv ' = indiferent de nr de biti
-    end
-    else if (load_en) begin 
+  //  if (!reset_n) begin
+  //     foreach (iw_reg_test[i])
+  //       iw_reg_test[i] = '{opc:ZERO,default:0};  // reset to all zeros //sintaxa de a initializa o structura in sv ' = indiferent de nr de biti
+  //   end
+  //   else if (load_en) begin 
       if (iw_reg_test[read_pointer].opc == ZERO) 
         expected_result = 0;
       else if (iw_reg_test[read_pointer].opc == PASSA)
@@ -190,7 +192,7 @@ module instr_register_test
           else
             expected_result = iw_reg_test[read_pointer].op_a % iw_reg_test[read_pointer].op_b;
       end
-    end
+    //end
 
   $display("Actual result = %0d\n", instruction_word.result);
   $display("Expected result = %0d\n", expected_result);
@@ -204,7 +206,7 @@ module instr_register_test
   //    tests_failed++;
   // end
   
-  if(iw_reg_test[read_pointer].opc != instruction_word.opc) begin
+  if(iw_reg_test[read_pointer].opc !== instruction_word.opc) begin
       $display("Opcode INCORRECT!");
       num_of_errors_per_test++;
       has_error = 1;
@@ -212,7 +214,7 @@ module instr_register_test
   else
       $display("Opcode CORRECT!");
 
-   if(iw_reg_test[read_pointer].op_a != instruction_word.op_a) begin
+   if(iw_reg_test[read_pointer].op_a !== instruction_word.op_a) begin
       $display("Operand_a INCORRECT!");
       num_of_errors_per_test++;
       has_error = 1;
@@ -220,7 +222,7 @@ module instr_register_test
   else
       $display("Operand_a CORRECT!");
   
-    if(iw_reg_test[read_pointer].op_b != instruction_word.op_b) begin
+    if(iw_reg_test[read_pointer].op_b !== instruction_word.op_b) begin
       $display("Operand_b INCORRECT!");
       num_of_errors_per_test++;
       has_error = 1;
@@ -228,7 +230,7 @@ module instr_register_test
   else
       $display("Operand_b CORRECT!");
 
-   if(expected_result != instruction_word.result) begin
+   if(expected_result !== instruction_word.result) begin
       $display("Result INCORRECT!");
       num_of_errors_per_test++;
       has_error = 1;
