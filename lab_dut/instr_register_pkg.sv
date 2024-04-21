@@ -5,7 +5,7 @@
 package instr_register_pkg;
   timeunit 1ns/1ns;
 
-  typedef enum logic [3:0] { //se folosesc 4 biti ca sa fie lasat loc de adsaugat noi opcodes
+  typedef enum logic [3:0] { //se folosesc 4 biti ca sa fie lasat loc de adaugat noi opcode-uri
   	ZERO,
     PASSA,
     PASSB,
@@ -13,7 +13,8 @@ package instr_register_pkg;
     SUB,
     MULT,
     DIV,
-    MOD
+    MOD,
+    POW
   } opcode_t;
 
   typedef logic signed [31:0] operand_t;

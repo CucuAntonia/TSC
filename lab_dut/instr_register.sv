@@ -47,6 +47,7 @@ import instr_register_pkg::*;  // user-defined types are defined in instr_regist
               result = 0;
             else
               result = operand_a % operand_b;
+      
       endcase
           iw_reg[write_pointer] = '{opcode,operand_a,operand_b,result};   //starea default la logic e x - don't care
     end

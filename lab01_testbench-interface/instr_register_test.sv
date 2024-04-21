@@ -25,22 +25,18 @@ module instr_register_test
 
   timeunit 1ns/1ns;
   parameter RD_NR = 10; //mecanismul de overflow (write e pe 5 biti, cand ajungem la o valoare > 31, atunci ajungem la 32 = 100000 si se iau ultimii 5 biti = 00000 = 0)
-  parameter WR_NR = 10; //pt 33 = 100001 = 00001 = 1, etc
-  //cazul incremental de ce? se poate si random....write pointer ia valoari random (unsigned$random%32 ca sa fie valori 0-31), pozitive
-  //(WR_ORDER) - variabila , in case..si facem 3 cazuri..INCREENTAL (temp++), decremental(temp2--), random($unsigned random temp1%32 etc)
-  //static temp2 = 31
+  parameter WR_NR = 10; //pt 33 = 100001 = 00001 = 1, etc //cazul incremental de ce? se poate si random....write pointer ia valoari random (unsigned$random%32 ca sa fie valori 0-31), pozitive //(WR_ORDER) - variabila , in case..si facem 3 cazuri..INCREENTAL (temp++), decremental(temp2--), random($unsigned random temp1%32 etc) //static temp2 = 31
   parameter RD_ORDER = 1;
   parameter WR_ORDER = 0; //0 - i, 1 - rand, 2 - d
-  //parameter TEST_CASE;
   parameter TEST_NAME;
   parameter SEED_VAL = 555;
 
   int tests_passed = 0;
-  int num_of_errors_per_test = 0;
   int tests_failed = 0;
   int total_tests = 0;
+
   int seed = SEED_VAL;
-  instruction_t iw_reg_test[0:31];
+  instruction_t iw_reg_test [0:31];
 
   initial begin //timpul 0 al simularii se executa
     $display("\n\n***********************************************************");
@@ -48,8 +44,7 @@ module instr_register_test
     $display(    "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***");
     $display(    "***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***");
     $display(    "***********************************************************");
-    //abordare black box - stim ce intra stim ce iese 
-    //abordare white box - ?
+
 
     $display("\nReseting the instruction register...");
     write_pointer  = 5'h00;         // initialize write pointer
@@ -58,15 +53,23 @@ module instr_register_test
     reset_n       <= 1'b0;          // assert reset_n (active low)
     repeat (2) @(posedge clk) ;     // hold in reset for 2 clock cycles
     reset_n        = 1'b1;          // deassert reset_n (active low)
-
-    $display("\nWriting values to register stack...");
     @(posedge clk) load_en = 1'b1;  // enable writing to register
+    for (int i = 0; i < 32; i++)
+    begin
+      iw_reg_test[i] = '{opc:ZERO,default:0};
+    end
+    $display("\nWriting values to register stack...");
+    //@(posedge clk) load_en = 1'b1;  
     //repeat (3) begin - cod original
     repeat (WR_NR) begin //modificare 11.03.2024 
-      @(posedge clk) randomize_transaction;
-      @(negedge clk) print_transaction;
-      save_test_data;
+      @(posedge clk) begin
+        randomize_transaction;   
+        save_test_data;
     end
+    @(negedge clk) print_transaction;
+      
+    end
+    save_test_data;
     @(posedge clk) load_en = 1'b0;  // turn-off writing to register
 
     // read back and display same three register locations
@@ -79,21 +82,18 @@ module instr_register_test
       @(posedge clk) 
         case (RD_ORDER)
           0: read_pointer = i;
-          1: read_pointer = $unsigned($random) % 32;
+          1: read_pointer = $unsigned($random)%32;
           2: read_pointer = 31 - (i % 32);
         endcase
-      //putem si aici sa facem pt read ca la write
-      //mai trebuie un param pt read order
-      //sunt 9 cazuri : I-i, i-d, i-r, d-i, d-r, d-d etc
       @(negedge clk) print_results;
       check_results;
     end
 
     @(posedge clk);
     final_report;
-    //in final report fopen("reports/regression_status.txt/ si citim pe rand fisierele) si facem TEST_NAME failed /passed si apoi close file ca 
-    //next step sa se afiseze si parametrii cu cre am rulat si nr de rd si wr
-    //examen - adauga parametru nou, save forme unda 
+    tests_report;
+
+  
     
     $display("\n***********************************************************");
     $display(  "***  THIS IS A SELF-CHECKING TESTBENCH.  YOU  DON'T ***");
@@ -103,27 +103,23 @@ module instr_register_test
     $finish;
   end
 
-  
 
   function void randomize_transaction;
     // A later lab will replace this function with SystemVerilog
     // constrained random values
-    //
     // The stactic temp variable is required in order to write to fixed
     // addresses of 0, 1 and 2.  This will be replaceed with randomizeed
     // write_pointer values in a later lab
-    //
-    //examen - adaugare POW, ca operatie..si ceva la results cu bitul 63 ca sa fie semnul
-    static int temp = 0; //static - alocata o singura data la apelul functiei
-    //pt cazul decremental facem un temp_decrement = 31 si facem temp-- ...cand se ajunge la 0, facem -- => -1 care e 111111 = ultimii 5 biti = 31, ia de la capat
+  
+    static int temp = 0; //static - alocata o singura data la apelul functiei //pt cazul decremental facem un temp_decrement = 31 si facem temp-- ...cand se ajunge la 0, facem -- => -1 care e 111111 = ultimii 5 biti = 31, ia de la capat
     static int temp2 = 31;
-    //write_pointer <= temp++; //aici primeste valori random 
+
     operand_a     <= $random(seed)%16;                 // between -15 and 15 ..random genereaza un nr pe 32 biti, vendor - producator tool -2G....+2G
     operand_b     <= $unsigned($random)%16;            // between 0 and 15 //converteste nr negative la pozitive 
     opcode        <= opcode_t'($unsigned($random)%8);  // between 0 and 7, cast to opcode_t type
     case (WR_ORDER) 
       0: write_pointer <= temp++;
-      1: write_pointer <= $unsigned($random) % 32;
+      1: write_pointer <= $unsigned($random)%32;
       2: write_pointer <= temp2--;
     endcase
   endfunction: randomize_transaction
@@ -145,100 +141,88 @@ module instr_register_test
 
   function void save_test_data;
     iw_reg_test[write_pointer] = '{opcode, operand_a, operand_b, 0};
-    $display("Am salvat! WRP %0d", write_pointer);
-    $display("OPCODE =  %0d", iw_reg_test[write_pointer].opc);
-    $display("OPERAND_A: %0d", iw_reg_test[write_pointer].op_a);
-    $display("OPERAND_B: %0d\n", iw_reg_test[write_pointer].op_b);
-    $display("RESULT: %0d\n", iw_reg_test[write_pointer].result);
+    $display("Saving test register...");
+    $display("Write pointer: %0d", write_pointer);
+    $display("Opcode=  %0d", iw_reg_test[write_pointer].opc);
+    $display("Operand_a: %0d", iw_reg_test[write_pointer].op_a);
+    $display("Operand_b: %0d", iw_reg_test[write_pointer].op_b);
   endfunction: save_test_data
 
   function check_results;
   //calculam si aici rezultatul si comparam cu cel primit de la DUT
   //actual instr_word.result, declaram variabila locala exp_result
   //din instr lusm op a, op b, opcode si mai facem calculul o data
-   //la final un if separat care trebuie sa faca comparatie intre rezultat comparat aici si rezultatul primit
-
-   //trebuie sa verificam aici ca write_pointer sa fie ok si operanzii cititi bine 
+  //la final un if separat care trebuie sa faca comparatie intre rezultat comparat aici si rezultatul primit
+  //trebuie sa verificam aici ca write_pointer sa fie ok si operanzii cititi bine 
   
   operand_result expected_result;
 
   static bit has_error = 0;
-  //  if (!reset_n) begin
-  //     foreach (iw_reg_test[i])
-  //       iw_reg_test[i] = '{opc:ZERO,default:0};  // reset to all zeros //sintaxa de a initializa o structura in sv ' = indiferent de nr de biti
-  //   end
-  //   else if (load_en) begin 
-      if (iw_reg_test[read_pointer].opc == ZERO) 
+
+      if (iw_reg_test[read_pointer].opc === ZERO) 
         expected_result = 0;
-      else if (iw_reg_test[read_pointer].opc == PASSA)
+      else if (iw_reg_test[read_pointer].opc === PASSA)
         expected_result = iw_reg_test[read_pointer].op_a;
-      else if (iw_reg_test[read_pointer].opc == PASSB)
+      else if (iw_reg_test[read_pointer].opc === PASSB)
         expected_result = iw_reg_test[read_pointer].op_b;
-      else if (iw_reg_test[read_pointer].opc == ADD)
+      else if (iw_reg_test[read_pointer].opc === ADD)
         expected_result = iw_reg_test[read_pointer].op_a + iw_reg_test[read_pointer].op_b;
-      else if (iw_reg_test[read_pointer].opc == SUB)
+      else if (iw_reg_test[read_pointer].opc === SUB)
         expected_result = iw_reg_test[read_pointer].op_a - iw_reg_test[read_pointer].op_b;
-      else if (iw_reg_test[read_pointer].opc == MULT)
+      else if (iw_reg_test[read_pointer].opc === MULT)
         expected_result = iw_reg_test[read_pointer].op_a * iw_reg_test[read_pointer].op_b;
-      else if (iw_reg_test[read_pointer].opc == DIV) begin
-        if(iw_reg_test[read_pointer].op_b== 0)
+      else if (iw_reg_test[read_pointer].opc === DIV) begin
+        if(iw_reg_test[read_pointer].op_b === 0)
           expected_result = 0;
         else
           expected_result = iw_reg_test[read_pointer].op_a / iw_reg_test[read_pointer].op_b; 
       end
-      else if (iw_reg_test[read_pointer].opc == MOD) begin
-          if(iw_reg_test[read_pointer].op_b== 0)
+      else if (iw_reg_test[read_pointer].opc === MOD) begin
+          if(iw_reg_test[read_pointer].op_b === 0)
             expected_result = 0;
           else
             expected_result = iw_reg_test[read_pointer].op_a % iw_reg_test[read_pointer].op_b;
       end
-    //end
 
-  $display("Actual result = %0d\n", instruction_word.result);
-  $display("Expected result = %0d\n", expected_result);
+      $display("\nCheck Results:");
+      $display("  read_pointer = %0d", read_pointer);
+      $display("  opcode = %0d (%s)", iw_reg_test[read_pointer].opc, iw_reg_test[read_pointer].opc.name);
+      $display("  operand_a = %0d",   iw_reg_test[read_pointer].op_a);
+      $display("  operand_b = %0d", iw_reg_test[read_pointer].op_b);
 
-  // if(expected_result != instruction_word.result) begin
-  //    $display("The result is ok!");
-  //    tests_passed++;
-  // end
-  // else begin
-  //    $display("Error! There is a problem with the result!");
-  //    tests_failed++;
-  // end
+  $display("Actual result DUT = %0d\n", instruction_word.result);
+  $display("Expected result  = %0d\n", expected_result);
   
   if(iw_reg_test[read_pointer].opc !== instruction_word.opc) begin
-      $display("Opcode INCORRECT!");
-      num_of_errors_per_test++;
+      $display("The opcode is incorrect!");
       has_error = 1;
   end
   else
-      $display("Opcode CORRECT!");
+      $display("The opcode is correct!");
 
    if(iw_reg_test[read_pointer].op_a !== instruction_word.op_a) begin
-      $display("Operand_a INCORRECT!");
-      num_of_errors_per_test++;
+      $display("Operand_a is incorrect!");
       has_error = 1;
    end
   else
-      $display("Operand_a CORRECT!");
+      $display("Operand_a is correct!");
   
     if(iw_reg_test[read_pointer].op_b !== instruction_word.op_b) begin
-      $display("Operand_b INCORRECT!");
-      num_of_errors_per_test++;
+      $display("Operand_b is incorrect!");
       has_error = 1;
     end
   else
-      $display("Operand_b CORRECT!");
+      $display("Operand_b is correct!");
 
    if(expected_result !== instruction_word.result) begin
-      $display("Result INCORRECT!");
-      num_of_errors_per_test++;
+      $display("The result is incorrect!");
       has_error = 1;
    end
   else 
-      $display("Result CORRECT!");
+      $display("The result is correct!");
     
   total_tests++;
+
   if(has_error) begin
       tests_failed++;
       has_error = 0;
@@ -247,20 +231,22 @@ module instr_register_test
       tests_passed++;
   endfunction: check_results
 
-//mai trebuie o functie de final report, cu passed, failed, rd nr si wr nr..si auto verificare daca pass+fail = rd_nr /wr/nr
 function final_report;
-  // $display("\n******************************************************");
-  // $display(" *** There is a total of",RD_NR + 1," values to read ***");
-  // $display(" *** and",WR_NR," values to write. ***");
-  // $display(" *** Total tests :", total_tests," *** ");
-  // $display(" *** Passed values:",tests_passed," *** ");
-  // $display(" *** Failed values:",tests_failed," *** ");
-  // $display(" ******************************************************");
-  //  $display("\nNumber of errors per transactions: %0d", num_of_errors_per_test);
-  //  $display("\nNumber of failed tests: %0d", tests_failed);
+  $display("\n******************************************************");
+  $display(" *** There is a total of",RD_NR + 1," values to read ***");
+  $display(" *** and",WR_NR," values to write. ***");
+  $display(" *** Total tests :", total_tests," *** ");
+  $display(" *** Passed values:",tests_passed," *** ");
+  $display(" *** Failed values:",tests_failed," *** ");
+  $display(" ******************************************************");
 
-  // if(tests_passed + tests_failed != total_tests)
-  //   $display("ATTENTION! The number of passed and failed values does not match the number of values! ");
+  if(tests_passed + tests_failed != total_tests)
+    $display("ATTENTION! The number of passed and failed values does not match the number of values! ");
+
+endfunction: final_report
+
+function tests_report;
+  
   int fd;
   fd = $fopen("../reports/regression_status.txt", "a");
   if(tests_failed == 0)
@@ -269,11 +255,10 @@ function final_report;
     $fdisplay(fd, "%s: FAILED", TEST_NAME);
   $fclose(fd);
 
-endfunction: final_report
+endfunction: tests_report
+
 
 endmodule : instr_register_test
 
-
-//TERMINAT ASTA + STUDIU GIT IGNORE
 
 

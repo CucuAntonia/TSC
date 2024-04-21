@@ -54,7 +54,7 @@ module top;
   initial begin   //se executa la momentul 0, timp de simulare 0...daca era fara begin putea sa fie o singura instr
     clk <= 0;
     forever #5  clk = ~clk; //asteapta 5 unitati de timp (timeunit mai sus, asteapta 5ns)
-  end //factor de umplere: parier pozitiv/perioada x 100% = 5/10 x 100% = 50%
+  end //factor de umplere: palier pozitiv/perioada x 100% = 5/10 x 100% = 50%
    
 
   initial begin //initial begin se executa paralel

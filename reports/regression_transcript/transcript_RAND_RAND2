@@ -1,23 +1,25 @@
 # 1
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 08:53:12 on Apr 15,2024
+# Start time: 22:05:09 on Apr 21,2024
 # vlog -sv -timescale 1ps/1ps -work work -f sources.txt 
 # -- Compiling package instr_register_pkg
 # -- Compiling module instr_register
 # -- Importing package instr_register_pkg
 # -- Compiling module instr_register_test
-# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(89): (vlog-2240) Treating stand-alone use of function 'check_results' as an implicit VOID cast.
-# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(93): (vlog-2240) Treating stand-alone use of function 'final_report' as an implicit VOID cast.
-# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(154): (vlog-2250) Function "check_results" has no return value assignment.
-# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(250): (vlog-2250) Function "final_report" has no return value assignment.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(91): (vlog-2240) Treating stand-alone use of function 'check_results' as an implicit VOID cast.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(95): (vlog-2240) Treating stand-alone use of function 'final_report' as an implicit VOID cast.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(96): (vlog-2240) Treating stand-alone use of function 'tests_report' as an implicit VOID cast.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(156): (vlog-2250) Function "check_results" has no return value assignment.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(239): (vlog-2250) Function "final_report" has no return value assignment.
+# ** Warning: ../lab01_testbench-interface/instr_register_test.sv(253): (vlog-2250) Function "tests_report" has no return value assignment.
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 08:53:12 on Apr 15,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 4
-# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=RAND_RAND2 -GWR_ORDER=1 -GWR_NR=50 -GRD_ORDER=1 -GRD_NR=50 -GSEED_VAL=74525433 
-# Start time: 08:53:12 on Apr 15,2024
+# End time: 22:05:09 on Apr 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 6
+# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=RAND_RAND2 -GWR_ORDER=1 -GWR_NR=100 -GRD_ORDER=1 -GRD_NR=100 -GSEED_VAL=74525760 
+# Start time: 22:05:09 on Apr 21,2024
 # 
 # 
 # ***********************************************************
@@ -27,1375 +29,3208 @@
 # ***********************************************************
 # 
 # Reseting the instruction register...
+#           0
+# ZERO 0 0 0
+#           1
+# ZERO 0 0 0
+#           2
+# ZERO 0 0 0
+#           3
+# ZERO 0 0 0
+#           4
+# ZERO 0 0 0
+#           5
+# ZERO 0 0 0
+#           6
+# ZERO 0 0 0
+#           7
+# ZERO 0 0 0
+#           8
+# ZERO 0 0 0
+#           9
+# ZERO 0 0 0
+#          10
+# ZERO 0 0 0
+#          11
+# ZERO 0 0 0
+#          12
+# ZERO 0 0 0
+#          13
+# ZERO 0 0 0
+#          14
+# ZERO 0 0 0
+#          15
+# ZERO 0 0 0
+#          16
+# ZERO 0 0 0
+#          17
+# ZERO 0 0 0
+#          18
+# ZERO 0 0 0
+#          19
+# ZERO 0 0 0
+#          20
+# ZERO 0 0 0
+#          21
+# ZERO 0 0 0
+#          22
+# ZERO 0 0 0
+#          23
+# ZERO 0 0 0
+#          24
+# ZERO 0 0 0
+#          25
+# ZERO 0 0 0
+#          26
+# ZERO 0 0 0
+#          27
+# ZERO 0 0 0
+#          28
+# ZERO 0 0 0
+#          29
+# ZERO 0 0 0
+#          30
+# ZERO 0 0 0
+#          31
+# ZERO 0 0 0
 # 
 # Writing values to register stack...
-# Writing to register location 9: 
+# Saving test register...
+# Write pointer: 0
+# Opcode=  x
+# Operand_a: x
+# Operand_b: x
+# Writing to register location 15: 
+#   opcode = 0 (ZERO)
+#   operand_a = -12
+#   operand_b = 13
+# 
+# Saving test register...
+# Write pointer: 15
+# Opcode=  0
+# Operand_a: -12
+# Operand_b: 13
+# Writing to register location 26: 
+#   opcode = 7 (MOD)
+#   operand_a = -3
+#   operand_b = 8
+# 
+# Saving test register...
+# Write pointer: 26
+# Opcode=  7
+# Operand_a: -3
+# Operand_b: 8
+# Writing to register location 4: 
+#   opcode = 2 (PASSB)
+#   operand_a = 8
+#   operand_b = 15
+# 
+# Saving test register...
+# Write pointer: 4
+# Opcode=  2
+# Operand_a: 8
+# Operand_b: 15
+# Writing to register location 17: 
+#   opcode = 4 (SUB)
+#   operand_a = 15
+#   operand_b = 10
+# 
+# Saving test register...
+# Write pointer: 17
+# Opcode=  4
+# Operand_a: 15
+# Operand_b: 10
+# Writing to register location 11: 
+#   opcode = 1 (PASSA)
+#   operand_a = -6
+#   operand_b = 4
+# 
+# Saving test register...
+# Write pointer: 11
+# Opcode=  1
+# Operand_a: -6
+# Operand_b: 4
+# Writing to register location 7: 
+#   opcode = 3 (ADD)
+#   operand_a = -12
+#   operand_b = 1
+# 
+# Saving test register...
+# Write pointer: 7
+# Opcode=  3
+# Operand_a: -12
+# Operand_b: 1
+# Writing to register location 31: 
 #   opcode = 7 (MOD)
 #   operand_a = -15
-#   operand_b = 3
+#   operand_b = 11
 # 
-# Am salvat! WRP 9
-# OPCODE =  7
-# OPERAND_A: -15
-# OPERAND_B: 3
-# 
-# RESULT: 0
-# 
-# Writing to register location 19: 
-#   opcode = 1 (PASSA)
-#   operand_a = 3
+# Saving test register...
+# Write pointer: 31
+# Opcode=  7
+# Operand_a: -15
+# Operand_b: 11
+# Writing to register location 4: 
+#   opcode = 7 (MOD)
+#   operand_a = -5
 #   operand_b = 7
 # 
-# Am salvat! WRP 19
-# OPCODE =  1
-# OPERAND_A: 3
-# OPERAND_B: 7
+# Saving test register...
+# Write pointer: 4
+# Opcode=  7
+# Operand_a: -5
+# Operand_b: 7
+# Writing to register location 0: 
+#   opcode = 4 (SUB)
+#   operand_a = 7
+#   operand_b = 15
 # 
-# RESULT: 0
+# Saving test register...
+# Write pointer: 0
+# Opcode=  4
+# Operand_a: 7
+# Operand_b: 15
+# Writing to register location 1: 
+#   opcode = 0 (ZERO)
+#   operand_a = -1
+#   operand_b = 4
 # 
-# Writing to register location 11: 
-#   opcode = 3 (ADD)
-#   operand_a = -9
-#   operand_b = 9
+# Saving test register...
+# Write pointer: 1
+# Opcode=  0
+# Operand_a: -1
+# Operand_b: 4
+# Writing to register location 10: 
+#   opcode = 1 (PASSA)
+#   operand_a = -12
+#   operand_b = 0
 # 
-# Am salvat! WRP 11
-# OPCODE =  3
-# OPERAND_A: -9
-# OPERAND_B: 9
-# 
-# RESULT: 0
-# 
-# Writing to register location 11: 
-#   opcode = 3 (ADD)
-#   operand_a = -7
-#   operand_b = 3
-# 
-# Am salvat! WRP 11
-# OPCODE =  3
-# OPERAND_A: -7
-# OPERAND_B: 3
-# 
-# RESULT: 0
-# 
-# Writing to register location 2: 
-#   opcode = 3 (ADD)
-#   operand_a = -13
-#   operand_b = 11
-# 
-# Am salvat! WRP 2
-# OPCODE =  3
-# OPERAND_A: -13
-# OPERAND_B: 11
-# 
-# RESULT: 0
-# 
-# Writing to register location 23: 
+# Saving test register...
+# Write pointer: 10
+# Opcode=  1
+# Operand_a: -12
+# Operand_b: 0
+# Writing to register location 18: 
 #   opcode = 2 (PASSB)
-#   operand_a = 11
-#   operand_b = 11
+#   operand_a = 0
+#   operand_b = 1
 # 
-# Am salvat! WRP 23
-# OPCODE =  2
-# OPERAND_A: 11
-# OPERAND_B: 11
+# Saving test register...
+# Write pointer: 18
+# Opcode=  2
+# Operand_a: 0
+# Operand_b: 1
+# Writing to register location 6: 
+#   opcode = 2 (PASSB)
+#   operand_a = -15
+#   operand_b = 10
 # 
-# RESULT: 0
-# 
-# Writing to register location 19: 
-#   opcode = 7 (MOD)
-#   operand_a = 11
+# Saving test register...
+# Write pointer: 6
+# Opcode=  2
+# Operand_a: -15
+# Operand_b: 10
+# Writing to register location 8: 
+#   opcode = 6 (DIV)
+#   operand_a = 10
 #   operand_b = 2
 # 
-# Am salvat! WRP 19
-# OPCODE =  7
-# OPERAND_A: 11
-# OPERAND_B: 2
-# 
-# RESULT: 0
-# 
-# Writing to register location 30: 
-#   opcode = 3 (ADD)
-#   operand_a = -14
-#   operand_b = 7
-# 
-# Am salvat! WRP 30
-# OPCODE =  3
-# OPERAND_A: -14
-# OPERAND_B: 7
-# 
-# RESULT: 0
-# 
-# Writing to register location 22: 
-#   opcode = 6 (DIV)
-#   operand_a = 7
-#   operand_b = 3
-# 
-# Am salvat! WRP 22
-# OPCODE =  6
-# OPERAND_A: 7
-# OPERAND_B: 3
-# 
-# RESULT: 0
-# 
-# Writing to register location 29: 
-#   opcode = 6 (DIV)
-#   operand_a = -13
-#   operand_b = 14
-# 
-# Am salvat! WRP 29
-# OPCODE =  6
-# OPERAND_A: -13
-# OPERAND_B: 14
-# 
-# RESULT: 0
-# 
-# Writing to register location 16: 
-#   opcode = 5 (MULT)
-#   operand_a = -2
+# Saving test register...
+# Write pointer: 8
+# Opcode=  6
+# Operand_a: 10
+# Operand_b: 2
+# Writing to register location 0: 
+#   opcode = 0 (ZERO)
+#   operand_a = 2
 #   operand_b = 6
 # 
-# Am salvat! WRP 16
-# OPCODE =  5
-# OPERAND_A: -2
-# OPERAND_B: 6
+# Saving test register...
+# Write pointer: 0
+# Opcode=  0
+# Operand_a: 2
+# Operand_b: 6
+# Writing to register location 10: 
+#   opcode = 0 (ZERO)
+#   operand_a = 6
+#   operand_b = 8
 # 
-# RESULT: 0
+# Saving test register...
+# Write pointer: 10
+# Opcode=  0
+# Operand_a: 6
+# Operand_b: 8
+# Writing to register location 4: 
+#   opcode = 2 (PASSB)
+#   operand_a = -8
+#   operand_b = 0
 # 
+# Saving test register...
+# Write pointer: 4
+# Opcode=  2
+# Operand_a: -8
+# Operand_b: 0
+# Writing to register location 2: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# 
+# Saving test register...
+# Write pointer: 2
+# Opcode=  4
+# Operand_a: 0
+# Operand_b: 10
+# Writing to register location 0: 
+#   opcode = 2 (PASSB)
+#   operand_a = -6
+#   operand_b = 4
+# 
+# Saving test register...
+# Write pointer: 0
+# Opcode=  2
+# Operand_a: -6
+# Operand_b: 4
+# Writing to register location 8: 
+#   opcode = 0 (ZERO)
+#   operand_a = -12
+#   operand_b = 2
+# 
+# Saving test register...
+# Write pointer: 8
+# Opcode=  0
+# Operand_a: -12
+# Operand_b: 2
 # Writing to register location 14: 
 #   opcode = 0 (ZERO)
+#   operand_a = -14
+#   operand_b = 0
+# 
+# Saving test register...
+# Write pointer: 14
+# Opcode=  0
+# Operand_a: -14
+# Operand_b: 0
+# Writing to register location 0: 
+#   opcode = 6 (DIV)
+#   operand_a = 0
+#   operand_b = 8
+# 
+# Saving test register...
+# Write pointer: 0
+# Opcode=  6
+# Operand_a: 0
+# Operand_b: 8
+# Writing to register location 27: 
+#   opcode = 0 (ZERO)
+#   operand_a = -8
+#   operand_b = 14
+# 
+# Saving test register...
+# Write pointer: 27
+# Opcode=  0
+# Operand_a: -8
+# Operand_b: 14
+# Writing to register location 8: 
+#   opcode = 3 (ADD)
+#   operand_a = -2
+#   operand_b = 0
+# 
+# Saving test register...
+# Write pointer: 8
+# Opcode=  3
+# Operand_a: -2
+# Operand_b: 0
+# Writing to register location 7: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 11
+# 
+# Saving test register...
+# Write pointer: 7
+# Opcode=  0
+# Operand_a: 0
+# Operand_b: 11
+# Writing to register location 10: 
+#   opcode = 7 (MOD)
+#   operand_a = 11
+#   operand_b = 8
+# 
+# Saving test register...
+# Write pointer: 10
+# Opcode=  7
+# Operand_a: 11
+# Operand_b: 8
+# Writing to register location 7: 
+#   opcode = 2 (PASSB)
+#   operand_a = 8
+#   operand_b = 7
+# 
+# Saving test register...
+# Write pointer: 7
+# Opcode=  2
+# Operand_a: 8
+# Operand_b: 7
+# Writing to register location 20: 
+#   opcode = 7 (MOD)
+#   operand_a = 7
+#   operand_b = 10
+# 
+# Saving test register...
+# Write pointer: 20
+# Opcode=  7
+# Operand_a: 7
+# Operand_b: 10
+# Writing to register location 16: 
+#   opcode = 4 (SUB)
+#   operand_a = 10
+#   operand_b = 7
+# 
+# Saving test register...
+# Write pointer: 16
+# Opcode=  4
+# Operand_a: 10
+# Operand_b: 7
+# Writing to register location 6: 
+#   opcode = 0 (ZERO)
+#   operand_a = 7
+#   operand_b = 4
+# 
+# Saving test register...
+# Write pointer: 6
+# Opcode=  0
+# Operand_a: 7
+# Operand_b: 4
+# Writing to register location 27: 
+#   opcode = 6 (DIV)
+#   operand_a = 4
+#   operand_b = 0
+# 
+# Saving test register...
+# Write pointer: 27
+# Opcode=  6
+# Operand_a: 4
+# Operand_b: 0
+# Writing to register location 11: 
+#   opcode = 3 (ADD)
+#   operand_a = 0
+#   operand_b = 6
+# 
+# Saving test register...
+# Write pointer: 11
+# Opcode=  3
+# Operand_a: 0
+# Operand_b: 6
+# Writing to register location 11: 
+#   opcode = 3 (ADD)
+#   operand_a = 6
+#   operand_b = 11
+# 
+# Saving test register...
+# Write pointer: 11
+# Opcode=  3
+# Operand_a: 6
+# Operand_b: 11
+# Writing to register location 1: 
+#   opcode = 3 (ADD)
+#   operand_a = 11
+#   operand_b = 11
+# 
+# Saving test register...
+# Write pointer: 1
+# Opcode=  3
+# Operand_a: 11
+# Operand_b: 11
+# Writing to register location 23: 
+#   opcode = 1 (PASSA)
+#   operand_a = 11
+#   operand_b = 11
+# 
+# Saving test register...
+# Write pointer: 23
+# Opcode=  1
+# Operand_a: 11
+# Operand_b: 11
+# Writing to register location 10: 
+#   opcode = 7 (MOD)
+#   operand_a = 11
+#   operand_b = 1
+# 
+# Saving test register...
+# Write pointer: 10
+# Opcode=  7
+# Operand_a: 11
+# Operand_b: 1
+# Writing to register location 30: 
+#   opcode = 2 (PASSB)
+#   operand_a = -15
+#   operand_b = 7
+# 
+# Saving test register...
+# Write pointer: 30
+# Opcode=  2
+# Operand_a: -15
+# Operand_b: 7
+# Writing to register location 18: 
+#   opcode = 6 (DIV)
+#   operand_a = -9
+#   operand_b = 10
+# 
+# Saving test register...
+# Write pointer: 18
+# Opcode=  6
+# Operand_a: -9
+# Operand_b: 10
+# Writing to register location 16: 
+#   opcode = 2 (PASSB)
+#   operand_a = 10
+#   operand_b = 14
+# 
+# Saving test register...
+# Write pointer: 16
+# Opcode=  2
+# Operand_a: 10
+# Operand_b: 14
+# Writing to register location 5: 
+#   opcode = 0 (ZERO)
+#   operand_a = 14
+#   operand_b = 2
+# 
+# Saving test register...
+# Write pointer: 5
+# Opcode=  0
+# Operand_a: 14
+# Operand_b: 2
+# Writing to register location 26: 
+#   opcode = 5 (MULT)
+#   operand_a = 2
+#   operand_b = 0
+# 
+# Saving test register...
+# Write pointer: 26
+# Opcode=  5
+# Operand_a: 2
+# Operand_b: 0
+# Writing to register location 10: 
+#   opcode = 2 (PASSB)
+#   operand_a = 0
+#   operand_b = 5
+# 
+# Saving test register...
+# Write pointer: 10
+# Opcode=  2
+# Operand_a: 0
+# Operand_b: 5
+# Writing to register location 18: 
+#   opcode = 2 (PASSB)
+#   operand_a = 5
+#   operand_b = 10
+# 
+# Saving test register...
+# Write pointer: 18
+# Opcode=  2
+# Operand_a: 5
+# Operand_b: 10
+# Writing to register location 12: 
+#   opcode = 2 (PASSB)
+#   operand_a = -6
+#   operand_b = 10
+# 
+# Saving test register...
+# Write pointer: 12
+# Opcode=  2
+# Operand_a: -6
+# Operand_b: 10
+# Writing to register location 20: 
+#   opcode = 4 (SUB)
+#   operand_a = -6
+#   operand_b = 2
+# 
+# Saving test register...
+# Write pointer: 20
+# Opcode=  4
+# Operand_a: -6
+# Operand_b: 2
+# Writing to register location 11: 
+#   opcode = 4 (SUB)
+#   operand_a = -14
+#   operand_b = 12
+# 
+# Saving test register...
+# Write pointer: 11
+# Opcode=  4
+# Operand_a: -14
+# Operand_b: 12
+# Writing to register location 19: 
+#   opcode = 3 (ADD)
+#   operand_a = -4
+#   operand_b = 4
+# 
+# Saving test register...
+# Write pointer: 19
+# Opcode=  3
+# Operand_a: -4
+# Operand_b: 4
+# Writing to register location 20: 
+#   opcode = 3 (ADD)
+#   operand_a = 4
+#   operand_b = 11
+# 
+# Saving test register...
+# Write pointer: 20
+# Opcode=  3
+# Operand_a: 4
+# Operand_b: 11
+# Writing to register location 8: 
+#   opcode = 4 (SUB)
+#   operand_a = 11
+#   operand_b = 3
+# 
+# Saving test register...
+# Write pointer: 8
+# Opcode=  4
+# Operand_a: 11
+# Operand_b: 3
+# Writing to register location 1: 
+#   opcode = 0 (ZERO)
+#   operand_a = -13
+#   operand_b = 4
+# 
+# Saving test register...
+# Write pointer: 1
+# Opcode=  0
+# Operand_a: -13
+# Operand_b: 4
+# Writing to register location 22: 
+#   opcode = 1 (PASSA)
+#   operand_a = 4
+#   operand_b = 8
+# 
+# Saving test register...
+# Write pointer: 22
+# Opcode=  1
+# Operand_a: 4
+# Operand_b: 8
+# Writing to register location 31: 
+#   opcode = 6 (DIV)
+#   operand_a = -8
+#   operand_b = 1
+# 
+# Saving test register...
+# Write pointer: 31
+# Opcode=  6
+# Operand_a: -8
+# Operand_b: 1
+# Writing to register location 10: 
+#   opcode = 7 (MOD)
+#   operand_a = 1
+#   operand_b = 6
+# 
+# Saving test register...
+# Write pointer: 10
+# Opcode=  7
+# Operand_a: 1
+# Operand_b: 6
+# Writing to register location 18: 
+#   opcode = 2 (PASSB)
+#   operand_a = -10
+#   operand_b = 15
+# 
+# Saving test register...
+# Write pointer: 18
+# Opcode=  2
+# Operand_a: -10
+# Operand_b: 15
+# Writing to register location 6: 
+#   opcode = 2 (PASSB)
+#   operand_a = -1
+#   operand_b = 10
+# 
+# Saving test register...
+# Write pointer: 6
+# Opcode=  2
+# Operand_a: -1
+# Operand_b: 10
+# Writing to register location 13: 
+#   opcode = 6 (DIV)
+#   operand_a = -6
+#   operand_b = 2
+# 
+# Saving test register...
+# Write pointer: 13
+# Opcode=  6
+# Operand_a: -6
+# Operand_b: 2
+# Writing to register location 11: 
+#   opcode = 5 (MULT)
+#   operand_a = 2
+#   operand_b = 6
+# 
+# Saving test register...
+# Write pointer: 11
+# Opcode=  5
+# Operand_a: 2
+# Operand_b: 6
+# Writing to register location 27: 
+#   opcode = 3 (ADD)
 #   operand_a = 6
 #   operand_b = 13
 # 
-# Am salvat! WRP 14
-# OPCODE =  0
-# OPERAND_A: 6
-# OPERAND_B: 13
-# 
-# RESULT: 0
-# 
-# Writing to register location 10: 
-#   opcode = 6 (DIV)
+# Saving test register...
+# Write pointer: 27
+# Opcode=  3
+# Operand_a: 6
+# Operand_b: 13
+# Writing to register location 19: 
+#   opcode = 3 (ADD)
 #   operand_a = -3
-#   operand_b = 0
+#   operand_b = 11
 # 
-# Am salvat! WRP 10
-# OPCODE =  6
-# OPERAND_A: -3
-# OPERAND_B: 0
+# Saving test register...
+# Write pointer: 19
+# Opcode=  3
+# Operand_a: -3
+# Operand_b: 11
+# Writing to register location 6: 
+#   opcode = 3 (ADD)
+#   operand_a = 11
+#   operand_b = 11
 # 
-# RESULT: 0
+# Saving test register...
+# Write pointer: 6
+# Opcode=  3
+# Operand_a: 11
+# Operand_b: 11
+# Writing to register location 27: 
+#   opcode = 6 (DIV)
+#   operand_a = -5
+#   operand_b = 3
 # 
-# Writing to register location 28: 
+# Saving test register...
+# Write pointer: 27
+# Opcode=  6
+# Operand_a: -5
+# Operand_b: 3
+# Writing to register location 22: 
+#   opcode = 3 (ADD)
+#   operand_a = 3
+#   operand_b = 6
+# 
+# Saving test register...
+# Write pointer: 22
+# Opcode=  3
+# Operand_a: 3
+# Operand_b: 6
+# Writing to register location 26: 
+#   opcode = 6 (DIV)
+#   operand_a = 6
+#   operand_b = 11
+# 
+# Saving test register...
+# Write pointer: 26
+# Opcode=  6
+# Operand_a: 6
+# Operand_b: 11
+# Writing to register location 29: 
 #   opcode = 2 (PASSB)
-#   operand_a = 0
-#   operand_b = 14
+#   operand_a = 11
+#   operand_b = 6
 # 
-# Am salvat! WRP 28
-# OPCODE =  2
-# OPERAND_A: 0
-# OPERAND_B: 14
-# 
-# RESULT: 0
-# 
+# Saving test register...
+# Write pointer: 29
+# Opcode=  2
+# Operand_a: 11
+# Operand_b: 6
 # Writing to register location 21: 
-#   opcode = 4 (SUB)
-#   operand_a = -2
+#   opcode = 5 (MULT)
+#   operand_a = -10
 #   operand_b = 10
 # 
-# Am salvat! WRP 21
-# OPCODE =  4
-# OPERAND_A: -2
-# OPERAND_B: 10
-# 
-# RESULT: 0
-# 
-# Writing to register location 17: 
+# Saving test register...
+# Write pointer: 21
+# Opcode=  5
+# Operand_a: -10
+# Operand_b: 10
+# Writing to register location 3: 
 #   opcode = 5 (MULT)
 #   operand_a = -6
-#   operand_b = 12
+#   operand_b = 13
 # 
-# Am salvat! WRP 17
-# OPCODE =  5
-# OPERAND_A: -6
-# OPERAND_B: 12
-# 
-# RESULT: 0
-# 
-# Writing to register location 24: 
-#   opcode = 1 (PASSA)
-#   operand_a = -4
+# Saving test register...
+# Write pointer: 3
+# Opcode=  5
+# Operand_a: -6
+# Operand_b: 13
+# Writing to register location 27: 
+#   opcode = 3 (ADD)
+#   operand_a = -3
 #   operand_b = 5
 # 
-# Am salvat! WRP 24
-# OPCODE =  1
-# OPERAND_A: -4
-# OPERAND_B: 5
-# 
-# RESULT: 0
-# 
-# Writing to register location 27: 
-#   opcode = 0 (ZERO)
-#   operand_a = 5
-#   operand_b = 1
-# 
-# Am salvat! WRP 27
-# OPCODE =  0
-# OPERAND_A: 5
-# OPERAND_B: 1
-# 
-# RESULT: 0
-# 
-# Writing to register location 4: 
+# Saving test register...
+# Write pointer: 27
+# Opcode=  3
+# Operand_a: -3
+# Operand_b: 5
+# Writing to register location 20: 
 #   opcode = 3 (ADD)
-#   operand_a = -15
-#   operand_b = 8
-# 
-# Am salvat! WRP 4
-# OPCODE =  3
-# OPERAND_A: -15
-# OPERAND_B: 8
-# 
-# RESULT: 0
-# 
-# Writing to register location 27: 
-#   opcode = 4 (SUB)
-#   operand_a = 8
-#   operand_b = 11
-# 
-# Am salvat! WRP 27
-# OPCODE =  4
-# OPERAND_A: 8
-# OPERAND_B: 11
-# 
-# RESULT: 0
-# 
-# Writing to register location 30: 
-#   opcode = 3 (ADD)
-#   operand_a = -5
-#   operand_b = 4
-# 
-# Am salvat! WRP 30
-# OPCODE =  3
-# OPERAND_A: -5
-# OPERAND_B: 4
-# 
-# RESULT: 0
-# 
-# Writing to register location 25: 
-#   opcode = 6 (DIV)
-#   operand_a = -12
-#   operand_b = 11
-# 
-# Am salvat! WRP 25
-# OPCODE =  6
-# OPERAND_A: -12
-# OPERAND_B: 11
-# 
-# RESULT: 0
-# 
-# Writing to register location 30: 
-#   opcode = 1 (PASSA)
-#   operand_a = 11
-#   operand_b = 14
-# 
-# Am salvat! WRP 30
-# OPCODE =  1
-# OPERAND_A: 11
-# OPERAND_B: 14
-# 
-# RESULT: 0
-# 
-# Writing to register location 9: 
-#   opcode = 6 (DIV)
-#   operand_a = -2
-#   operand_b = 9
-# 
-# Am salvat! WRP 9
-# OPCODE =  6
-# OPERAND_A: -2
-# OPERAND_B: 9
-# 
-# RESULT: 0
-# 
-# Writing to register location 19: 
-#   opcode = 1 (PASSA)
-#   operand_a = 9
-#   operand_b = 14
-# 
-# Am salvat! WRP 19
-# OPCODE =  1
-# OPERAND_A: 9
-# OPERAND_B: 14
-# 
-# RESULT: 0
-# 
-# Writing to register location 24: 
-#   opcode = 3 (ADD)
-#   operand_a = 14
-#   operand_b = 9
-# 
-# Am salvat! WRP 24
-# OPCODE =  3
-# OPERAND_A: 14
-# OPERAND_B: 9
-# 
-# RESULT: 0
-# 
-# Writing to register location 23: 
-#   opcode = 0 (ZERO)
-#   operand_a = -7
+#   operand_a = -11
 #   operand_b = 3
 # 
-# Am salvat! WRP 23
-# OPCODE =  0
-# OPERAND_A: -7
-# OPERAND_B: 3
-# 
-# RESULT: 0
-# 
-# Writing to register location 14: 
-#   opcode = 7 (MOD)
-#   operand_a = -13
-#   operand_b = 8
-# 
-# Am salvat! WRP 14
-# OPCODE =  7
-# OPERAND_A: -13
-# OPERAND_B: 8
-# 
-# RESULT: 0
-# 
-# Writing to register location 8: 
-#   opcode = 6 (DIV)
-#   operand_a = -8
-#   operand_b = 7
-# 
-# Am salvat! WRP 8
-# OPCODE =  6
-# OPERAND_A: -8
-# OPERAND_B: 7
-# 
-# RESULT: 0
-# 
-# Writing to register location 21: 
-#   opcode = 0 (ZERO)
-#   operand_a = -9
-#   operand_b = 14
-# 
-# Am salvat! WRP 21
-# OPCODE =  0
-# OPERAND_A: -9
-# OPERAND_B: 14
-# 
-# RESULT: 0
-# 
-# Writing to register location 19: 
-#   opcode = 5 (MULT)
-#   operand_a = 14
-#   operand_b = 8
-# 
-# Am salvat! WRP 19
-# OPCODE =  5
-# OPERAND_A: 14
-# OPERAND_B: 8
-# 
-# RESULT: 0
-# 
-# Writing to register location 1: 
-#   opcode = 3 (ADD)
-#   operand_a = -8
-#   operand_b = 5
-# 
-# Am salvat! WRP 1
-# OPCODE =  3
-# OPERAND_A: -8
-# OPERAND_B: 5
-# 
-# RESULT: 0
-# 
-# Writing to register location 12: 
-#   opcode = 1 (PASSA)
-#   operand_a = 5
-#   operand_b = 3
-# 
-# Am salvat! WRP 12
-# OPCODE =  1
-# OPERAND_A: 5
-# OPERAND_B: 3
-# 
-# RESULT: 0
-# 
-# Writing to register location 15: 
+# Saving test register...
+# Write pointer: 20
+# Opcode=  3
+# Operand_a: -11
+# Operand_b: 3
+# Writing to register location 17: 
 #   opcode = 4 (SUB)
 #   operand_a = 3
+#   operand_b = 11
+# 
+# Saving test register...
+# Write pointer: 17
+# Opcode=  4
+# Operand_a: 3
+# Operand_b: 11
+# Writing to register location 1: 
+#   opcode = 1 (PASSA)
+#   operand_a = 11
+#   operand_b = 4
+# 
+# Saving test register...
+# Write pointer: 1
+# Opcode=  1
+# Operand_a: 11
+# Operand_b: 4
+# Writing to register location 15: 
+#   opcode = 1 (PASSA)
+#   operand_a = -12
 #   operand_b = 1
 # 
-# Am salvat! WRP 15
-# OPCODE =  4
-# OPERAND_A: 3
-# OPERAND_B: 1
-# 
-# RESULT: 0
-# 
+# Saving test register...
+# Write pointer: 15
+# Opcode=  1
+# Operand_a: -12
+# Operand_b: 1
 # Writing to register location 18: 
 #   opcode = 7 (MOD)
 #   operand_a = -15
-#   operand_b = 12
-# 
-# Am salvat! WRP 18
-# OPCODE =  7
-# OPERAND_A: -15
-# OPERAND_B: 12
-# 
-# RESULT: 0
-# 
-# Writing to register location 26: 
-#   opcode = 2 (PASSB)
-#   operand_a = 12
-#   operand_b = 15
-# 
-# Am salvat! WRP 26
-# OPCODE =  2
-# OPERAND_A: 12
-# OPERAND_B: 15
-# 
-# RESULT: 0
-# 
-# Writing to register location 2: 
-#   opcode = 2 (PASSB)
-#   operand_a = -1
-#   operand_b = 2
-# 
-# Am salvat! WRP 2
-# OPCODE =  2
-# OPERAND_A: -1
-# OPERAND_B: 2
-# 
-# RESULT: 0
-# 
-# Writing to register location 6: 
-#   opcode = 2 (PASSB)
-#   operand_a = 2
-#   operand_b = 10
-# 
-# Am salvat! WRP 6
-# OPCODE =  2
-# OPERAND_A: 2
-# OPERAND_B: 10
-# 
-# RESULT: 0
-# 
-# Writing to register location 10: 
-#   opcode = 6 (DIV)
-#   operand_a = 10
-#   operand_b = 2
-# 
-# Am salvat! WRP 10
-# OPCODE =  6
-# OPERAND_A: 10
-# OPERAND_B: 2
-# 
-# RESULT: 0
-# 
-# Writing to register location 4: 
-#   opcode = 2 (PASSB)
-#   operand_a = -14
-#   operand_b = 6
-# 
-# Am salvat! WRP 4
-# OPCODE =  2
-# OPERAND_A: -14
-# OPERAND_B: 6
-# 
-# RESULT: 0
-# 
-# Writing to register location 10: 
-#   opcode = 4 (SUB)
-#   operand_a = -10
-#   operand_b = 10
-# 
-# Am salvat! WRP 10
-# OPCODE =  4
-# OPERAND_A: -10
-# OPERAND_B: 10
-# 
-# RESULT: 0
-# 
-# Writing to register location 2: 
-#   opcode = 2 (PASSB)
-#   operand_a = 10
-#   operand_b = 4
-# 
-# Am salvat! WRP 2
-# OPCODE =  2
-# OPERAND_A: 10
-# OPERAND_B: 4
-# 
-# RESULT: 0
-# 
-# Writing to register location 8: 
-#   opcode = 2 (PASSB)
-#   operand_a = -12
-#   operand_b = 10
-# 
-# Am salvat! WRP 8
-# OPCODE =  2
-# OPERAND_A: -12
-# OPERAND_B: 10
-# 
-# RESULT: 0
-# 
-# Writing to register location 17: 
-#   opcode = 0 (ZERO)
-#   operand_a = -6
-#   operand_b = 2
-# 
-# Am salvat! WRP 17
-# OPCODE =  0
-# OPERAND_A: -6
-# OPERAND_B: 2
-# 
-# RESULT: 0
-# 
-# Writing to register location 15: 
-#   opcode = 1 (PASSA)
-#   operand_a = 2
-#   operand_b = 8
-# 
-# Am salvat! WRP 15
-# OPCODE =  1
-# OPERAND_A: 2
-# OPERAND_B: 8
-# 
-# RESULT: 0
-# 
-# Writing to register location 22: 
-#   opcode = 7 (MOD)
-#   operand_a = -8
 #   operand_b = 1
 # 
-# Am salvat! WRP 22
-# OPCODE =  7
-# OPERAND_A: -8
-# OPERAND_B: 1
-# 
-# RESULT: 0
-# 
-# Writing to register location 25: 
-#   opcode = 6 (DIV)
-#   operand_a = -15
+# Saving test register...
+# Write pointer: 18
+# Opcode=  7
+# Operand_a: -15
+# Operand_b: 1
+# Writing to register location 18: 
+#   opcode = 2 (PASSB)
+#   operand_a = 1
 #   operand_b = 15
 # 
-# Am salvat! WRP 25
-# OPCODE =  6
-# OPERAND_A: -15
-# OPERAND_B: 15
+# Saving test register...
+# Write pointer: 18
+# Opcode=  2
+# Operand_a: 1
+# Operand_b: 15
+# Writing to register location 29: 
+#   opcode = 2 (PASSB)
+#   operand_a = -1
+#   operand_b = 2
 # 
-# RESULT: 0
+# Saving test register...
+# Write pointer: 29
+# Opcode=  2
+# Operand_a: -1
+# Operand_b: 2
+# Writing to register location 23: 
+#   opcode = 5 (MULT)
+#   operand_a = -14
+#   operand_b = 2
 # 
+# Saving test register...
+# Write pointer: 23
+# Opcode=  5
+# Operand_a: -14
+# Operand_b: 2
+# Writing to register location 5: 
+#   opcode = 7 (MOD)
+#   operand_a = 2
+#   operand_b = 13
+# 
+# Saving test register...
+# Write pointer: 5
+# Opcode=  7
+# Operand_a: 2
+# Operand_b: 13
+# Writing to register location 14: 
+#   opcode = 5 (MULT)
+#   operand_a = -3
+#   operand_b = 7
+# 
+# Saving test register...
+# Write pointer: 14
+# Opcode=  5
+# Operand_a: -3
+# Operand_b: 7
+# Writing to register location 5: 
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 5
+# 
+# Saving test register...
+# Write pointer: 5
+# Opcode=  6
+# Operand_a: 7
+# Operand_b: 5
+# Writing to register location 26: 
+#   opcode = 5 (MULT)
+#   operand_a = 5
+#   operand_b = 14
+# 
+# Saving test register...
+# Write pointer: 26
+# Opcode=  5
+# Operand_a: 5
+# Operand_b: 14
+# Writing to register location 6: 
+#   opcode = 2 (PASSB)
+#   operand_a = -2
+#   operand_b = 5
+# 
+# Saving test register...
+# Write pointer: 6
+# Opcode=  2
+# Operand_a: -2
+# Operand_b: 5
+# Writing to register location 0: 
+#   opcode = 6 (DIV)
+#   operand_a = -11
+#   operand_b = 10
+# 
+# Saving test register...
+# Write pointer: 0
+# Opcode=  6
+# Operand_a: -11
+# Operand_b: 10
+# Writing to register location 0: 
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# 
+# Saving test register...
+# Write pointer: 0
+# Opcode=  0
+# Operand_a: -6
+# Operand_b: 6
+# Writing to register location 23: 
+#   opcode = 0 (ZERO)
+#   operand_a = -10
+#   operand_b = 0
+# 
+# Saving test register...
+# Write pointer: 23
+# Opcode=  0
+# Operand_a: -10
+# Operand_b: 0
+# Writing to register location 24: 
+#   opcode = 7 (MOD)
+#   operand_a = 0
+#   operand_b = 0
+# 
+# Saving test register...
+# Write pointer: 24
+# Opcode=  7
+# Operand_a: 0
+# Operand_b: 0
+# Writing to register location 28: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 7
+# 
+# Saving test register...
+# Write pointer: 28
+# Opcode=  0
+# Operand_a: 0
+# Operand_b: 7
+# Writing to register location 17: 
+#   opcode = 4 (SUB)
+#   operand_a = 7
+#   operand_b = 8
+# 
+# Saving test register...
+# Write pointer: 17
+# Opcode=  4
+# Operand_a: 7
+# Operand_b: 8
+# Writing to register location 6: 
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# 
+# Saving test register...
+# Write pointer: 6
+# Opcode=  1
+# Operand_a: -8
+# Operand_b: 12
+# Writing to register location 31: 
+#   opcode = 6 (DIV)
+#   operand_a = -4
+#   operand_b = 1
+# 
+# Saving test register...
+# Write pointer: 31
+# Opcode=  6
+# Operand_a: -4
+# Operand_b: 1
+# Writing to register location 12: 
+#   opcode = 7 (MOD)
+#   operand_a = -15
+#   operand_b = 6
+# 
+# Saving test register...
+# Write pointer: 12
+# Opcode=  7
+# Operand_a: -15
+# Operand_b: 6
+# Writing to register location 25: 
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 15
+# 
+# Saving test register...
+# Write pointer: 25
+# Opcode=  4
+# Operand_a: 6
+# Operand_b: 15
 # Writing to register location 9: 
 #   opcode = 1 (PASSA)
 #   operand_a = -1
-#   operand_b = 6
+#   operand_b = 12
 # 
-# Am salvat! WRP 9
-# OPCODE =  1
-# OPERAND_A: -1
-# OPERAND_B: 6
-# 
-# RESULT: 0
-# 
-# Writing to register location 22: 
+# Saving test register...
+# Write pointer: 9
+# Opcode=  1
+# Operand_a: -1
+# Operand_b: 12
+# Writing to register location 31: 
 #   opcode = 1 (PASSA)
-#   operand_a = -10
+#   operand_a = -4
 #   operand_b = 9
 # 
-# Am salvat! WRP 22
-# OPCODE =  1
-# OPERAND_A: -10
-# OPERAND_B: 9
-# 
-# RESULT: 0
-# 
-# Writing to register location 9: 
-#   opcode = 6 (DIV)
-#   operand_a = 9
-#   operand_b = 9
-# 
-# Am salvat! WRP 9
-# OPCODE =  6
-# OPERAND_A: 9
-# OPERAND_B: 9
-# 
-# RESULT: 0
-# 
-# 
-# Reading back the same register locations written...
-# Read from register location 15: 
-#   opcode = 1 (PASSA)
-#   operand_a = 2
-#   operand_b = 8
-# 
-#   result = 2
-# 
-# Actual result = 2
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 19: 
-#   opcode = 5 (MULT)
-#   operand_a = 14
-#   operand_b = 8
-# 
-#   result = 112
-# 
-# Actual result = 112
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 5: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-# 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 3: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-# 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 22: 
-#   opcode = 1 (PASSA)
-#   operand_a = -10
-#   operand_b = 9
-# 
-#   result = -10
-# 
-# Actual result = -10
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 10: 
-#   opcode = 4 (SUB)
-#   operand_a = -10
-#   operand_b = 10
-# 
-#   result = -20
-# 
-# Actual result = -20
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 23: 
-#   opcode = 0 (ZERO)
+# Saving test register...
+# Write pointer: 31
+# Opcode=  1
+# Operand_a: -4
+# Operand_b: 9
+# Writing to register location 19: 
+#   opcode = 7 (MOD)
 #   operand_a = -7
-#   operand_b = 3
+#   operand_b = 9
 # 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 10: 
-#   opcode = 4 (SUB)
-#   operand_a = -10
-#   operand_b = 10
-# 
-#   result = -20
-# 
-# Actual result = -20
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 25: 
-#   opcode = 6 (DIV)
-#   operand_a = -15
+# Saving test register...
+# Write pointer: 19
+# Opcode=  7
+# Operand_a: -7
+# Operand_b: 9
+# Writing to register location 23: 
+#   opcode = 3 (ADD)
+#   operand_a = 9
 #   operand_b = 15
 # 
-#   result = -1
+# Saving test register...
+# Write pointer: 23
+# Opcode=  3
+# Operand_a: 9
+# Operand_b: 15
+# Writing to register location 24: 
+#   opcode = 7 (MOD)
+#   operand_a = 15
+#   operand_b = 3
 # 
-# Actual result = -1
+# Saving test register...
+# Write pointer: 24
+# Opcode=  7
+# Operand_a: 15
+# Operand_b: 3
+# Writing to register location 29: 
+#   opcode = 0 (ZERO)
+#   operand_a = 3
+#   operand_b = 7
 # 
-# Expected result = x
+# Saving test register...
+# Write pointer: 29
+# Opcode=  0
+# Operand_a: 3
+# Operand_b: 7
+# Writing to register location 12: 
+#   opcode = 5 (MULT)
+#   operand_a = 7
+#   operand_b = 8
 # 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 22: 
+# Saving test register...
+# Write pointer: 12
+# Opcode=  5
+# Operand_a: 7
+# Operand_b: 8
+# Writing to register location 8: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+# Saving test register...
+# Write pointer: 8
+# Opcode=  4
+# Operand_a: -8
+# Operand_b: 13
+# Writing to register location 9: 
+#   opcode = 0 (ZERO)
+#   operand_a = -3
+#   operand_b = 12
+# 
+# Saving test register...
+# Write pointer: 9
+# Opcode=  0
+# Operand_a: -3
+# Operand_b: 12
+# Writing to register location 30: 
 #   opcode = 1 (PASSA)
-#   operand_a = -10
-#   operand_b = 9
+#   operand_a = -4
+#   operand_b = 8
 # 
-#   result = -10
+# Saving test register...
+# Write pointer: 30
+# Opcode=  1
+# Operand_a: -4
+# Operand_b: 8
 # 
-# Actual result = -10
+# Reading back the same register locations written...
+# Read from register location 5: 
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 5
 # 
-# Expected result = x
+#   result = 1
 # 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 28: 
+# 
+# Check Results:
+#   read_pointer = 5
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 5
+# Actual result DUT = 1
+# 
+# Expected result calculat pe baza IW REG TEST = 1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 3: 
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# 
+#   result = -78
+# 
+# 
+# Check Results:
+#   read_pointer = 3
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# Actual result DUT = -78
+# 
+# Expected result calculat pe baza IW REG TEST = -78
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 16: 
 #   opcode = 2 (PASSB)
-#   operand_a = 0
+#   operand_a = 10
 #   operand_b = 14
 # 
 #   result = 14
 # 
-# Actual result = 14
 # 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 4: 
-#   opcode = 2 (PASSB)
-#   operand_a = -14
-#   operand_b = 6
-# 
-#   result = 6
-# 
-# Actual result = 6
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 2: 
+# Check Results:
+#   read_pointer = 16
 #   opcode = 2 (PASSB)
 #   operand_a = 10
-#   operand_b = 4
+#   operand_b = 14
+# Actual result DUT = 14
 # 
-#   result = 4
+# Expected result calculat pe baza IW REG TEST = 14
 # 
-# Actual result = 4
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 3: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-# 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 19: 
-#   opcode = 5 (MULT)
-#   operand_a = 14
-#   operand_b = 8
-# 
-#   result = 112
-# 
-# Actual result = 112
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 7: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-# 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 6: 
-#   opcode = 2 (PASSB)
-#   operand_a = 2
-#   operand_b = 10
-# 
-#   result = 10
-# 
-# Actual result = 10
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 17: 
-#   opcode = 0 (ZERO)
-#   operand_a = -6
-#   operand_b = 2
-# 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 31: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-# 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 11: 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 27: 
 #   opcode = 3 (ADD)
-#   operand_a = -7
-#   operand_b = 3
-# 
-#   result = -4
-# 
-# Actual result = -4
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 15: 
-#   opcode = 1 (PASSA)
-#   operand_a = 2
-#   operand_b = 8
+#   operand_a = -3
+#   operand_b = 5
 # 
 #   result = 2
 # 
-# Actual result = 2
 # 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 11: 
+# Check Results:
+#   read_pointer = 27
 #   opcode = 3 (ADD)
-#   operand_a = -7
-#   operand_b = 3
+#   operand_a = -3
+#   operand_b = 5
+# Actual result DUT = 2
 # 
-#   result = -4
+# Expected result calculat pe baza IW REG TEST = 2
 # 
-# Actual result = -4
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 27: 
+#   opcode = 3 (ADD)
+#   operand_a = -3
+#   operand_b = 5
 # 
-# Expected result = x
+#   result = 2
 # 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 13: 
+# 
+# Check Results:
+#   read_pointer = 27
+#   opcode = 3 (ADD)
+#   operand_a = -3
+#   operand_b = 5
+# Actual result DUT = 2
+# 
+# Expected result calculat pe baza IW REG TEST = 2
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 0: 
 #   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
+#   operand_a = -6
+#   operand_b = 6
 # 
 #   result = 0
 # 
-# Actual result = 0
 # 
-# Expected result = x
-# 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 20: 
+# Check Results:
+#   read_pointer = 0
 #   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
+#   operand_a = -6
+#   operand_b = 6
+# Actual result DUT = 0
 # 
-#   result = 0
+# Expected result calculat pe baza IW REG TEST = 0
 # 
-# Actual result = 0
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 23: 
+#   opcode = 3 (ADD)
+#   operand_a = 9
+#   operand_b = 15
 # 
-# Expected result = x
+#   result = 24
 # 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 3: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
 # 
-#   result = 0
+# Check Results:
+#   read_pointer = 23
+#   opcode = 3 (ADD)
+#   operand_a = 9
+#   operand_b = 15
+# Actual result DUT = 24
 # 
-# Actual result = 0
+# Expected result calculat pe baza IW REG TEST = 24
 # 
-# Expected result = x
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 27: 
+#   opcode = 3 (ADD)
+#   operand_a = -3
+#   operand_b = 5
 # 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 10: 
-#   opcode = 4 (SUB)
-#   operand_a = -10
-#   operand_b = 10
+#   result = 2
 # 
-#   result = -20
 # 
-# Actual result = -20
+# Check Results:
+#   read_pointer = 27
+#   opcode = 3 (ADD)
+#   operand_a = -3
+#   operand_b = 5
+# Actual result DUT = 2
 # 
-# Expected result = x
+# Expected result calculat pe baza IW REG TEST = 2
 # 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 26: 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 12: 
+#   opcode = 5 (MULT)
+#   operand_a = 7
+#   operand_b = 8
+# 
+#   result = 56
+# 
+# 
+# Check Results:
+#   read_pointer = 12
+#   opcode = 5 (MULT)
+#   operand_a = 7
+#   operand_b = 8
+# Actual result DUT = 56
+# 
+# Expected result calculat pe baza IW REG TEST = 56
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 6: 
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# 
+#   result = -8
+# 
+# 
+# Check Results:
+#   read_pointer = 6
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# Actual result DUT = -8
+# 
+# Expected result calculat pe baza IW REG TEST = -8
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 16: 
 #   opcode = 2 (PASSB)
-#   operand_a = 12
+#   operand_a = 10
+#   operand_b = 14
+# 
+#   result = 14
+# 
+# 
+# Check Results:
+#   read_pointer = 16
+#   opcode = 2 (PASSB)
+#   operand_a = 10
+#   operand_b = 14
+# Actual result DUT = 14
+# 
+# Expected result calculat pe baza IW REG TEST = 14
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 26: 
+#   opcode = 5 (MULT)
+#   operand_a = 5
+#   operand_b = 14
+# 
+#   result = 70
+# 
+# 
+# Check Results:
+#   read_pointer = 26
+#   opcode = 5 (MULT)
+#   operand_a = 5
+#   operand_b = 14
+# Actual result DUT = 70
+# 
+# Expected result calculat pe baza IW REG TEST = 70
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 19: 
+#   opcode = 7 (MOD)
+#   operand_a = -7
+#   operand_b = 9
+# 
+#   result = -7
+# 
+# 
+# Check Results:
+#   read_pointer = 19
+#   opcode = 7 (MOD)
+#   operand_a = -7
+#   operand_b = 9
+# Actual result DUT = -7
+# 
+# Expected result calculat pe baza IW REG TEST = -7
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 3: 
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# 
+#   result = -78
+# 
+# 
+# Check Results:
+#   read_pointer = 3
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# Actual result DUT = -78
+# 
+# Expected result calculat pe baza IW REG TEST = -78
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 6: 
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# 
+#   result = -8
+# 
+# 
+# Check Results:
+#   read_pointer = 6
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# Actual result DUT = -8
+# 
+# Expected result calculat pe baza IW REG TEST = -8
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 28: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 7
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 28
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 7
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 16: 
+#   opcode = 2 (PASSB)
+#   operand_a = 10
+#   operand_b = 14
+# 
+#   result = 14
+# 
+# 
+# Check Results:
+#   read_pointer = 16
+#   opcode = 2 (PASSB)
+#   operand_a = 10
+#   operand_b = 14
+# Actual result DUT = 14
+# 
+# Expected result calculat pe baza IW REG TEST = 14
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 8: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+#   result = -21
+# 
+# 
+# Check Results:
+#   read_pointer = 8
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# Actual result DUT = -21
+# 
+# Expected result calculat pe baza IW REG TEST = -21
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 27: 
+#   opcode = 3 (ADD)
+#   operand_a = -3
+#   operand_b = 5
+# 
+#   result = 2
+# 
+# 
+# Check Results:
+#   read_pointer = 27
+#   opcode = 3 (ADD)
+#   operand_a = -3
+#   operand_b = 5
+# Actual result DUT = 2
+# 
+# Expected result calculat pe baza IW REG TEST = 2
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 7: 
+#   opcode = 2 (PASSB)
+#   operand_a = 8
+#   operand_b = 7
+# 
+#   result = 7
+# 
+# 
+# Check Results:
+#   read_pointer = 7
+#   opcode = 2 (PASSB)
+#   operand_a = 8
+#   operand_b = 7
+# Actual result DUT = 7
+# 
+# Expected result calculat pe baza IW REG TEST = 7
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 8: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+#   result = -21
+# 
+# 
+# Check Results:
+#   read_pointer = 8
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# Actual result DUT = -21
+# 
+# Expected result calculat pe baza IW REG TEST = -21
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 8: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+#   result = -21
+# 
+# 
+# Check Results:
+#   read_pointer = 8
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# Actual result DUT = -21
+# 
+# Expected result calculat pe baza IW REG TEST = -21
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 18: 
+#   opcode = 2 (PASSB)
+#   operand_a = 1
 #   operand_b = 15
 # 
 #   result = 15
 # 
-# Actual result = 15
 # 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 10: 
-#   opcode = 4 (SUB)
-#   operand_a = -10
-#   operand_b = 10
-# 
-#   result = -20
-# 
-# Actual result = -20
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 4: 
+# Check Results:
+#   read_pointer = 18
 #   opcode = 2 (PASSB)
-#   operand_a = -14
-#   operand_b = 6
+#   operand_a = 1
+#   operand_b = 15
+# Actual result DUT = 15
 # 
-#   result = 6
+# Expected result calculat pe baza IW REG TEST = 15
 # 
-# Actual result = 6
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 23: 
+#   opcode = 3 (ADD)
+#   operand_a = 9
+#   operand_b = 15
 # 
-# Expected result = x
+#   result = 24
 # 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 15: 
-#   opcode = 1 (PASSA)
-#   operand_a = 2
+# 
+# Check Results:
+#   read_pointer = 23
+#   opcode = 3 (ADD)
+#   operand_a = 9
+#   operand_b = 15
+# Actual result DUT = 24
+# 
+# Expected result calculat pe baza IW REG TEST = 24
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 25: 
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 15
+# 
+#   result = -9
+# 
+# 
+# Check Results:
+#   read_pointer = 25
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 15
+# Actual result DUT = -9
+# 
+# Expected result calculat pe baza IW REG TEST = -9
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 17: 
+#   opcode = 4 (SUB)
+#   operand_a = 7
 #   operand_b = 8
 # 
-#   result = 2
+#   result = -1
 # 
-# Actual result = 2
 # 
-# Expected result = x
+# Check Results:
+#   read_pointer = 17
+#   opcode = 4 (SUB)
+#   operand_a = 7
+#   operand_b = 8
+# Actual result DUT = -1
 # 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 5: 
-#   opcode = 0 (ZERO)
+# Expected result calculat pe baza IW REG TEST = -1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 25: 
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 15
+# 
+#   result = -9
+# 
+# 
+# Check Results:
+#   read_pointer = 25
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 15
+# Actual result DUT = -9
+# 
+# Expected result calculat pe baza IW REG TEST = -9
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 2: 
+#   opcode = 4 (SUB)
 #   operand_a = 0
+#   operand_b = 10
+# 
+#   result = -10
+# 
+# 
+# Check Results:
+#   read_pointer = 2
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# Actual result DUT = -10
+# 
+# Expected result calculat pe baza IW REG TEST = -10
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 3: 
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# 
+#   result = -78
+# 
+# 
+# Check Results:
+#   read_pointer = 3
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# Actual result DUT = -78
+# 
+# Expected result calculat pe baza IW REG TEST = -78
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 17: 
+#   opcode = 4 (SUB)
+#   operand_a = 7
+#   operand_b = 8
+# 
+#   result = -1
+# 
+# 
+# Check Results:
+#   read_pointer = 17
+#   opcode = 4 (SUB)
+#   operand_a = 7
+#   operand_b = 8
+# Actual result DUT = -1
+# 
+# Expected result calculat pe baza IW REG TEST = -1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 17: 
+#   opcode = 4 (SUB)
+#   operand_a = 7
+#   operand_b = 8
+# 
+#   result = -1
+# 
+# 
+# Check Results:
+#   read_pointer = 17
+#   opcode = 4 (SUB)
+#   operand_a = 7
+#   operand_b = 8
+# Actual result DUT = -1
+# 
+# Expected result calculat pe baza IW REG TEST = -1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 14: 
+#   opcode = 5 (MULT)
+#   operand_a = -3
+#   operand_b = 7
+# 
+#   result = -21
+# 
+# 
+# Check Results:
+#   read_pointer = 14
+#   opcode = 5 (MULT)
+#   operand_a = -3
+#   operand_b = 7
+# Actual result DUT = -21
+# 
+# Expected result calculat pe baza IW REG TEST = -21
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 18: 
+#   opcode = 2 (PASSB)
+#   operand_a = 1
+#   operand_b = 15
+# 
+#   result = 15
+# 
+# 
+# Check Results:
+#   read_pointer = 18
+#   opcode = 2 (PASSB)
+#   operand_a = 1
+#   operand_b = 15
+# Actual result DUT = 15
+# 
+# Expected result calculat pe baza IW REG TEST = 15
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 0: 
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 0
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 29: 
+#   opcode = 0 (ZERO)
+#   operand_a = 3
+#   operand_b = 7
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 29
+#   opcode = 0 (ZERO)
+#   operand_a = 3
+#   operand_b = 7
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 3: 
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# 
+#   result = -78
+# 
+# 
+# Check Results:
+#   read_pointer = 3
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# Actual result DUT = -78
+# 
+# Expected result calculat pe baza IW REG TEST = -78
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 0: 
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 0
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 17: 
+#   opcode = 4 (SUB)
+#   operand_a = 7
+#   operand_b = 8
+# 
+#   result = -1
+# 
+# 
+# Check Results:
+#   read_pointer = 17
+#   opcode = 4 (SUB)
+#   operand_a = 7
+#   operand_b = 8
+# Actual result DUT = -1
+# 
+# Expected result calculat pe baza IW REG TEST = -1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 10: 
+#   opcode = 7 (MOD)
+#   operand_a = 1
+#   operand_b = 6
+# 
+#   result = 1
+# 
+# 
+# Check Results:
+#   read_pointer = 10
+#   opcode = 7 (MOD)
+#   operand_a = 1
+#   operand_b = 6
+# Actual result DUT = 1
+# 
+# Expected result calculat pe baza IW REG TEST = 1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 2: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# 
+#   result = -10
+# 
+# 
+# Check Results:
+#   read_pointer = 2
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# Actual result DUT = -10
+# 
+# Expected result calculat pe baza IW REG TEST = -10
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 25: 
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 15
+# 
+#   result = -9
+# 
+# 
+# Check Results:
+#   read_pointer = 25
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 15
+# Actual result DUT = -9
+# 
+# Expected result calculat pe baza IW REG TEST = -9
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 20: 
+#   opcode = 3 (ADD)
+#   operand_a = -11
+#   operand_b = 3
+# 
+#   result = -8
+# 
+# 
+# Check Results:
+#   read_pointer = 20
+#   opcode = 3 (ADD)
+#   operand_a = -11
+#   operand_b = 3
+# Actual result DUT = -8
+# 
+# Expected result calculat pe baza IW REG TEST = -8
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 4: 
+#   opcode = 2 (PASSB)
+#   operand_a = -8
 #   operand_b = 0
 # 
 #   result = 0
 # 
-# Actual result = 0
 # 
-# Expected result = x
-# 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 8: 
+# Check Results:
+#   read_pointer = 4
 #   opcode = 2 (PASSB)
-#   operand_a = -12
-#   operand_b = 10
+#   operand_a = -8
+#   operand_b = 0
+# Actual result DUT = 0
 # 
-#   result = 10
+# Expected result calculat pe baza IW REG TEST = 0
 # 
-# Actual result = 10
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 23: 
-#   opcode = 0 (ZERO)
-#   operand_a = -7
-#   operand_b = 3
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 4: 
+#   opcode = 2 (PASSB)
+#   operand_a = -8
+#   operand_b = 0
 # 
 #   result = 0
 # 
-# Actual result = 0
 # 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 28: 
+# Check Results:
+#   read_pointer = 4
 #   opcode = 2 (PASSB)
+#   operand_a = -8
+#   operand_b = 0
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 2: 
+#   opcode = 4 (SUB)
 #   operand_a = 0
+#   operand_b = 10
+# 
+#   result = -10
+# 
+# 
+# Check Results:
+#   read_pointer = 2
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# Actual result DUT = -10
+# 
+# Expected result calculat pe baza IW REG TEST = -10
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 8: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+#   result = -21
+# 
+# 
+# Check Results:
+#   read_pointer = 8
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# Actual result DUT = -21
+# 
+# Expected result calculat pe baza IW REG TEST = -21
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 1: 
+#   opcode = 1 (PASSA)
+#   operand_a = 11
+#   operand_b = 4
+# 
+#   result = 11
+# 
+# 
+# Check Results:
+#   read_pointer = 1
+#   opcode = 1 (PASSA)
+#   operand_a = 11
+#   operand_b = 4
+# Actual result DUT = 11
+# 
+# Expected result calculat pe baza IW REG TEST = 11
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 16: 
+#   opcode = 2 (PASSB)
+#   operand_a = 10
 #   operand_b = 14
 # 
 #   result = 14
 # 
-# Actual result = 14
 # 
-# Expected result = x
+# Check Results:
+#   read_pointer = 16
+#   opcode = 2 (PASSB)
+#   operand_a = 10
+#   operand_b = 14
+# Actual result DUT = 14
 # 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 9: 
-#   opcode = 6 (DIV)
-#   operand_a = 9
-#   operand_b = 9
+# Expected result calculat pe baza IW REG TEST = 14
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 10: 
+#   opcode = 7 (MOD)
+#   operand_a = 1
+#   operand_b = 6
 # 
 #   result = 1
 # 
-# Actual result = 1
 # 
-# Expected result = x
+# Check Results:
+#   read_pointer = 10
+#   opcode = 7 (MOD)
+#   operand_a = 1
+#   operand_b = 6
+# Actual result DUT = 1
 # 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 21: 
+# Expected result calculat pe baza IW REG TEST = 1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 28: 
 #   opcode = 0 (ZERO)
-#   operand_a = -9
+#   operand_a = 0
+#   operand_b = 7
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 28
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 7
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 26: 
+#   opcode = 5 (MULT)
+#   operand_a = 5
 #   operand_b = 14
 # 
-#   result = 0
+#   result = 70
 # 
-# Actual result = 0
 # 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 11: 
-#   opcode = 3 (ADD)
-#   operand_a = -7
-#   operand_b = 3
-# 
-#   result = -4
-# 
-# Actual result = -4
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 13: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-# 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 22: 
-#   opcode = 1 (PASSA)
-#   operand_a = -10
-#   operand_b = 9
-# 
-#   result = -10
-# 
-# Actual result = -10
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 18: 
-#   opcode = 7 (MOD)
-#   operand_a = -15
-#   operand_b = 12
-# 
-#   result = -3
-# 
-# Actual result = -3
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 3: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-# 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode INCORRECT!
-# Operand_a INCORRECT!
-# Operand_b INCORRECT!
-# Result INCORRECT!
-# Read from register location 6: 
-#   opcode = 2 (PASSB)
-#   operand_a = 2
-#   operand_b = 10
-# 
-#   result = 10
-# 
-# Actual result = 10
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 6: 
-#   opcode = 2 (PASSB)
-#   operand_a = 2
-#   operand_b = 10
-# 
-#   result = 10
-# 
-# Actual result = 10
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 1: 
-#   opcode = 3 (ADD)
-#   operand_a = -8
-#   operand_b = 5
-# 
-#   result = -3
-# 
-# Actual result = -3
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 15: 
-#   opcode = 1 (PASSA)
-#   operand_a = 2
-#   operand_b = 8
-# 
-#   result = 2
-# 
-# Actual result = 2
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 17: 
-#   opcode = 0 (ZERO)
-#   operand_a = -6
-#   operand_b = 2
-# 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 22: 
-#   opcode = 1 (PASSA)
-#   operand_a = -10
-#   operand_b = 9
-# 
-#   result = -10
-# 
-# Actual result = -10
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 10: 
-#   opcode = 4 (SUB)
-#   operand_a = -10
-#   operand_b = 10
-# 
-#   result = -20
-# 
-# Actual result = -20
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 19: 
+# Check Results:
+#   read_pointer = 26
 #   opcode = 5 (MULT)
-#   operand_a = 14
+#   operand_a = 5
+#   operand_b = 14
+# Actual result DUT = 70
+# 
+# Expected result calculat pe baza IW REG TEST = 70
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 7: 
+#   opcode = 2 (PASSB)
+#   operand_a = 8
+#   operand_b = 7
+# 
+#   result = 7
+# 
+# 
+# Check Results:
+#   read_pointer = 7
+#   opcode = 2 (PASSB)
+#   operand_a = 8
+#   operand_b = 7
+# Actual result DUT = 7
+# 
+# Expected result calculat pe baza IW REG TEST = 7
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 22: 
+#   opcode = 3 (ADD)
+#   operand_a = 3
+#   operand_b = 6
+# 
+#   result = 9
+# 
+# 
+# Check Results:
+#   read_pointer = 22
+#   opcode = 3 (ADD)
+#   operand_a = 3
+#   operand_b = 6
+# Actual result DUT = 9
+# 
+# Expected result calculat pe baza IW REG TEST = 9
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 2: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# 
+#   result = -10
+# 
+# 
+# Check Results:
+#   read_pointer = 2
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# Actual result DUT = -10
+# 
+# Expected result calculat pe baza IW REG TEST = -10
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 17: 
+#   opcode = 4 (SUB)
+#   operand_a = 7
 #   operand_b = 8
-# 
-#   result = 112
-# 
-# Actual result = 112
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 23: 
-#   opcode = 0 (ZERO)
-#   operand_a = -7
-#   operand_b = 3
-# 
-#   result = 0
-# 
-# Actual result = 0
-# 
-# Expected result = x
-# 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
-# Read from register location 25: 
-#   opcode = 6 (DIV)
-#   operand_a = -15
-#   operand_b = 15
 # 
 #   result = -1
 # 
-# Actual result = -1
 # 
-# Expected result = x
+# Check Results:
+#   read_pointer = 17
+#   opcode = 4 (SUB)
+#   operand_a = 7
+#   operand_b = 8
+# Actual result DUT = -1
 # 
-# Opcode CORRECT!
-# Operand_a CORRECT!
-# Operand_b CORRECT!
-# Result INCORRECT!
+# Expected result calculat pe baza IW REG TEST = -1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 0: 
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 0
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 7: 
+#   opcode = 2 (PASSB)
+#   operand_a = 8
+#   operand_b = 7
+# 
+#   result = 7
+# 
+# 
+# Check Results:
+#   read_pointer = 7
+#   opcode = 2 (PASSB)
+#   operand_a = 8
+#   operand_b = 7
+# Actual result DUT = 7
+# 
+# Expected result calculat pe baza IW REG TEST = 7
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 8: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+#   result = -21
+# 
+# 
+# Check Results:
+#   read_pointer = 8
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# Actual result DUT = -21
+# 
+# Expected result calculat pe baza IW REG TEST = -21
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 27: 
+#   opcode = 3 (ADD)
+#   operand_a = -3
+#   operand_b = 5
+# 
+#   result = 2
+# 
+# 
+# Check Results:
+#   read_pointer = 27
+#   opcode = 3 (ADD)
+#   operand_a = -3
+#   operand_b = 5
+# Actual result DUT = 2
+# 
+# Expected result calculat pe baza IW REG TEST = 2
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 28: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 7
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 28
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 7
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 8: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+#   result = -21
+# 
+# 
+# Check Results:
+#   read_pointer = 8
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# Actual result DUT = -21
+# 
+# Expected result calculat pe baza IW REG TEST = -21
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 23: 
+#   opcode = 3 (ADD)
+#   operand_a = 9
+#   operand_b = 15
+# 
+#   result = 24
+# 
+# 
+# Check Results:
+#   read_pointer = 23
+#   opcode = 3 (ADD)
+#   operand_a = 9
+#   operand_b = 15
+# Actual result DUT = 24
+# 
+# Expected result calculat pe baza IW REG TEST = 24
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 27: 
+#   opcode = 3 (ADD)
+#   operand_a = -3
+#   operand_b = 5
+# 
+#   result = 2
+# 
+# 
+# Check Results:
+#   read_pointer = 27
+#   opcode = 3 (ADD)
+#   operand_a = -3
+#   operand_b = 5
+# Actual result DUT = 2
+# 
+# Expected result calculat pe baza IW REG TEST = 2
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 3: 
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# 
+#   result = -78
+# 
+# 
+# Check Results:
+#   read_pointer = 3
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# Actual result DUT = -78
+# 
+# Expected result calculat pe baza IW REG TEST = -78
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 6: 
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# 
+#   result = -8
+# 
+# 
+# Check Results:
+#   read_pointer = 6
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# Actual result DUT = -8
+# 
+# Expected result calculat pe baza IW REG TEST = -8
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 25: 
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 15
+# 
+#   result = -9
+# 
+# 
+# Check Results:
+#   read_pointer = 25
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 15
+# Actual result DUT = -9
+# 
+# Expected result calculat pe baza IW REG TEST = -9
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 26: 
+#   opcode = 5 (MULT)
+#   operand_a = 5
+#   operand_b = 14
+# 
+#   result = 70
+# 
+# 
+# Check Results:
+#   read_pointer = 26
+#   opcode = 5 (MULT)
+#   operand_a = 5
+#   operand_b = 14
+# Actual result DUT = 70
+# 
+# Expected result calculat pe baza IW REG TEST = 70
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 9: 
+#   opcode = 0 (ZERO)
+#   operand_a = -3
+#   operand_b = 12
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 9
+#   opcode = 0 (ZERO)
+#   operand_a = -3
+#   operand_b = 12
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 3: 
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# 
+#   result = -78
+# 
+# 
+# Check Results:
+#   read_pointer = 3
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# Actual result DUT = -78
+# 
+# Expected result calculat pe baza IW REG TEST = -78
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 9: 
+#   opcode = 0 (ZERO)
+#   operand_a = -3
+#   operand_b = 12
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 9
+#   opcode = 0 (ZERO)
+#   operand_a = -3
+#   operand_b = 12
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 28: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 7
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 28
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 7
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 6: 
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# 
+#   result = -8
+# 
+# 
+# Check Results:
+#   read_pointer = 6
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# Actual result DUT = -8
+# 
+# Expected result calculat pe baza IW REG TEST = -8
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 28: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 7
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 28
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 7
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 11: 
+#   opcode = 5 (MULT)
+#   operand_a = 2
+#   operand_b = 6
+# 
+#   result = 12
+# 
+# 
+# Check Results:
+#   read_pointer = 11
+#   opcode = 5 (MULT)
+#   operand_a = 2
+#   operand_b = 6
+# Actual result DUT = 12
+# 
+# Expected result calculat pe baza IW REG TEST = 12
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 1: 
+#   opcode = 1 (PASSA)
+#   operand_a = 11
+#   operand_b = 4
+# 
+#   result = 11
+# 
+# 
+# Check Results:
+#   read_pointer = 1
+#   opcode = 1 (PASSA)
+#   operand_a = 11
+#   operand_b = 4
+# Actual result DUT = 11
+# 
+# Expected result calculat pe baza IW REG TEST = 11
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 16: 
+#   opcode = 2 (PASSB)
+#   operand_a = 10
+#   operand_b = 14
+# 
+#   result = 14
+# 
+# 
+# Check Results:
+#   read_pointer = 16
+#   opcode = 2 (PASSB)
+#   operand_a = 10
+#   operand_b = 14
+# Actual result DUT = 14
+# 
+# Expected result calculat pe baza IW REG TEST = 14
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 6: 
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# 
+#   result = -8
+# 
+# 
+# Check Results:
+#   read_pointer = 6
+#   opcode = 1 (PASSA)
+#   operand_a = -8
+#   operand_b = 12
+# Actual result DUT = -8
+# 
+# Expected result calculat pe baza IW REG TEST = -8
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 3: 
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# 
+#   result = -78
+# 
+# 
+# Check Results:
+#   read_pointer = 3
+#   opcode = 5 (MULT)
+#   operand_a = -6
+#   operand_b = 13
+# Actual result DUT = -78
+# 
+# Expected result calculat pe baza IW REG TEST = -78
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 26: 
+#   opcode = 5 (MULT)
+#   operand_a = 5
+#   operand_b = 14
+# 
+#   result = 70
+# 
+# 
+# Check Results:
+#   read_pointer = 26
+#   opcode = 5 (MULT)
+#   operand_a = 5
+#   operand_b = 14
+# Actual result DUT = 70
+# 
+# Expected result calculat pe baza IW REG TEST = 70
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 12: 
+#   opcode = 5 (MULT)
+#   operand_a = 7
+#   operand_b = 8
+# 
+#   result = 56
+# 
+# 
+# Check Results:
+#   read_pointer = 12
+#   opcode = 5 (MULT)
+#   operand_a = 7
+#   operand_b = 8
+# Actual result DUT = 56
+# 
+# Expected result calculat pe baza IW REG TEST = 56
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 4: 
+#   opcode = 2 (PASSB)
+#   operand_a = -8
+#   operand_b = 0
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 4
+#   opcode = 2 (PASSB)
+#   operand_a = -8
+#   operand_b = 0
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 8: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+#   result = -21
+# 
+# 
+# Check Results:
+#   read_pointer = 8
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# Actual result DUT = -21
+# 
+# Expected result calculat pe baza IW REG TEST = -21
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 19: 
+#   opcode = 7 (MOD)
+#   operand_a = -7
+#   operand_b = 9
+# 
+#   result = -7
+# 
+# 
+# Check Results:
+#   read_pointer = 19
+#   opcode = 7 (MOD)
+#   operand_a = -7
+#   operand_b = 9
+# Actual result DUT = -7
+# 
+# Expected result calculat pe baza IW REG TEST = -7
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 24: 
+#   opcode = 7 (MOD)
+#   operand_a = 15
+#   operand_b = 3
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 24
+#   opcode = 7 (MOD)
+#   operand_a = 15
+#   operand_b = 3
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 5: 
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 5
+# 
+#   result = 1
+# 
+# 
+# Check Results:
+#   read_pointer = 5
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 5
+# Actual result DUT = 1
+# 
+# Expected result calculat pe baza IW REG TEST = 1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 26: 
+#   opcode = 5 (MULT)
+#   operand_a = 5
+#   operand_b = 14
+# 
+#   result = 70
+# 
+# 
+# Check Results:
+#   read_pointer = 26
+#   opcode = 5 (MULT)
+#   operand_a = 5
+#   operand_b = 14
+# Actual result DUT = 70
+# 
+# Expected result calculat pe baza IW REG TEST = 70
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 0: 
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 0
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 0: 
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# 
+#   result = 0
+# 
+# 
+# Check Results:
+#   read_pointer = 0
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 6
+# Actual result DUT = 0
+# 
+# Expected result calculat pe baza IW REG TEST = 0
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 15: 
+#   opcode = 1 (PASSA)
+#   operand_a = -12
+#   operand_b = 1
+# 
+#   result = -12
+# 
+# 
+# Check Results:
+#   read_pointer = 15
+#   opcode = 1 (PASSA)
+#   operand_a = -12
+#   operand_b = 1
+# Actual result DUT = -12
+# 
+# Expected result calculat pe baza IW REG TEST = -12
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 22: 
+#   opcode = 3 (ADD)
+#   operand_a = 3
+#   operand_b = 6
+# 
+#   result = 9
+# 
+# 
+# Check Results:
+#   read_pointer = 22
+#   opcode = 3 (ADD)
+#   operand_a = 3
+#   operand_b = 6
+# Actual result DUT = 9
+# 
+# Expected result calculat pe baza IW REG TEST = 9
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 19: 
+#   opcode = 7 (MOD)
+#   operand_a = -7
+#   operand_b = 9
+# 
+#   result = -7
+# 
+# 
+# Check Results:
+#   read_pointer = 19
+#   opcode = 7 (MOD)
+#   operand_a = -7
+#   operand_b = 9
+# Actual result DUT = -7
+# 
+# Expected result calculat pe baza IW REG TEST = -7
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 19: 
+#   opcode = 7 (MOD)
+#   operand_a = -7
+#   operand_b = 9
+# 
+#   result = -7
+# 
+# 
+# Check Results:
+#   read_pointer = 19
+#   opcode = 7 (MOD)
+#   operand_a = -7
+#   operand_b = 9
+# Actual result DUT = -7
+# 
+# Expected result calculat pe baza IW REG TEST = -7
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 31: 
+#   opcode = 1 (PASSA)
+#   operand_a = -4
+#   operand_b = 9
+# 
+#   result = -4
+# 
+# 
+# Check Results:
+#   read_pointer = 31
+#   opcode = 1 (PASSA)
+#   operand_a = -4
+#   operand_b = 9
+# Actual result DUT = -4
+# 
+# Expected result calculat pe baza IW REG TEST = -4
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 10: 
+#   opcode = 7 (MOD)
+#   operand_a = 1
+#   operand_b = 6
+# 
+#   result = 1
+# 
+# 
+# Check Results:
+#   read_pointer = 10
+#   opcode = 7 (MOD)
+#   operand_a = 1
+#   operand_b = 6
+# Actual result DUT = 1
+# 
+# Expected result calculat pe baza IW REG TEST = 1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 7: 
+#   opcode = 2 (PASSB)
+#   operand_a = 8
+#   operand_b = 7
+# 
+#   result = 7
+# 
+# 
+# Check Results:
+#   read_pointer = 7
+#   opcode = 2 (PASSB)
+#   operand_a = 8
+#   operand_b = 7
+# Actual result DUT = 7
+# 
+# Expected result calculat pe baza IW REG TEST = 7
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 19: 
+#   opcode = 7 (MOD)
+#   operand_a = -7
+#   operand_b = 9
+# 
+#   result = -7
+# 
+# 
+# Check Results:
+#   read_pointer = 19
+#   opcode = 7 (MOD)
+#   operand_a = -7
+#   operand_b = 9
+# Actual result DUT = -7
+# 
+# Expected result calculat pe baza IW REG TEST = -7
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 11: 
+#   opcode = 5 (MULT)
+#   operand_a = 2
+#   operand_b = 6
+# 
+#   result = 12
+# 
+# 
+# Check Results:
+#   read_pointer = 11
+#   opcode = 5 (MULT)
+#   operand_a = 2
+#   operand_b = 6
+# Actual result DUT = 12
+# 
+# Expected result calculat pe baza IW REG TEST = 12
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 5: 
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 5
+# 
+#   result = 1
+# 
+# 
+# Check Results:
+#   read_pointer = 5
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 5
+# Actual result DUT = 1
+# 
+# Expected result calculat pe baza IW REG TEST = 1
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 2: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# 
+#   result = -10
+# 
+# 
+# Check Results:
+#   read_pointer = 2
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# Actual result DUT = -10
+# 
+# Expected result calculat pe baza IW REG TEST = -10
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 2: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# 
+#   result = -10
+# 
+# 
+# Check Results:
+#   read_pointer = 2
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 10
+# Actual result DUT = -10
+# 
+# Expected result calculat pe baza IW REG TEST = -10
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# Read from register location 31: 
+#   opcode = 1 (PASSA)
+#   operand_a = -4
+#   operand_b = 9
+# 
+#   result = -4
+# 
+# 
+# Check Results:
+#   read_pointer = 31
+#   opcode = 1 (PASSA)
+#   operand_a = -4
+#   operand_b = 9
+# Actual result DUT = -4
+# 
+# Expected result calculat pe baza IW REG TEST = -4
+# 
+# The opcode is correct!
+# Operand_a is correct!
+# Operand_b is correct!
+# The result is correct!
+# 
+# ******************************************************
+#  *** There is a total of        101 values to read ***
+#  *** and        100 values to write. ***
+#  *** Total tests :        101 *** 
+#  *** Passed values:        101 *** 
+#  *** Failed values:          0 *** 
+#  ******************************************************
 # 
 # ***********************************************************
 # ***  THIS IS A SELF-CHECKING TESTBENCH.  YOU  DON'T ***
@@ -1403,7 +3238,7 @@
 # ***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***
 # ***********************************************************
 # 
-# ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(103)
-#    Time: 1056 ns  Iteration: 1  Instance: /top/test
-# End time: 08:53:13 on Apr 15,2024, Elapsed time: 0:00:01
+# ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(106)
+#    Time: 2056 ns  Iteration: 1  Instance: /top/test
+# End time: 22:05:10 on Apr 21,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
